@@ -239,8 +239,8 @@ fisher.test(BCS0708$rubbcomm, BCS0708$bcsvictim, workspace = 2e+07, hybrid = TRU
 
 ```
 ## 
-## 	Fisher's Exact Test for Count Data hybrid using asym.chisq. iff
-## 	(exp=5, perc=80, Emin=1)
+## 	Fisher's Exact Test for Count Data hybrid using asym.chisq. iff (exp=5,
+## 	perc=80, Emin=1)
 ## 
 ## data:  BCS0708$rubbcomm and BCS0708$bcsvictim
 ## p-value < 2.2e-16

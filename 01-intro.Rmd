@@ -2,7 +2,7 @@
 
 ## Install R & RStudio
 
-We recommend that you use your own laptops for this course. If you have not already, then please download and install R and R Studio onto your laptops. 
+We recommend that you use your own laptops for this course. If you have not already, then please download and install R and RStudio onto your laptops. 
 - click [here](https://www.youtube.com/watch?v=eD07NznguA4) for instructions using Windows or
 - [here](https://www.youtube.com/watch?v=cX532N_XLIs&list=PLqzoL9-eJTNDw71zWePXyHx3_cm_fMP8S) for instructions using a Mac. If you are using a Mac it would be convenient that you use the most up to date version of OS or, at least one compatible with the most recent version of R. Read [this]() if you want to check how to do that.
 

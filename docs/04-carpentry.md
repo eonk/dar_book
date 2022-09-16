@@ -1249,7 +1249,7 @@ politics_by_occ
 ```
 
 ```
-## # A tibble: 18 x 2
+## # A tibble: 18 × 2
 ##    f_occup                                       mean_poli_score
 ##    <fct>                                                   <dbl>
 ##  1 Responsible for ordinary shopping, etc.                  5.23

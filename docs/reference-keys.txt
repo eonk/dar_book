@@ -103,3 +103,5 @@ assessing-model-fit-ii-confusion-matrix-and-roc-curves
 interactions
 further-resources-2
 wrapping-up
+homework-activities
+general-instructions

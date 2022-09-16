@@ -4,26 +4,26 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 1 A first lesson about R | Data Analysis in R &amp; Studio</title>
-  <meta name="description" content="This is the course material for Data Analysis in R &amp; Studio." />
+  <title>Chapter 1 A first lesson about R | Data Analysis in R &amp; RStudio</title>
+  <meta name="description" content="This is the course material for Data Analysis in R &amp; RStudio." />
   <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 1 A first lesson about R | Data Analysis in R &amp; Studio" />
+  <meta property="og:title" content="Chapter 1 A first lesson about R | Data Analysis in R &amp; RStudio" />
   <meta property="og:type" content="book" />
   
-  <meta property="og:description" content="This is the course material for Data Analysis in R &amp; Studio." />
+  <meta property="og:description" content="This is the course material for Data Analysis in R &amp; RStudio." />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 1 A first lesson about R | Data Analysis in R &amp; Studio" />
+  <meta name="twitter:title" content="Chapter 1 A first lesson about R | Data Analysis in R &amp; RStudio" />
   
-  <meta name="twitter:description" content="This is the course material for Data Analysis in R &amp; Studio." />
+  <meta name="twitter:description" content="This is the course material for Data Analysis in R &amp; RStudio." />
   
 
 <meta name="author" content="Reka Solymosi and Eon Kim (based on material developed with Juanjo Medina)" />
 
 
-<meta name="date" content="2022-09-15" />
+<meta name="date" content="2022-09-16" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -133,7 +133,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">Data Analysis in R & Studio</a></li>
+<li><a href="./">Data Analysis in R & RStudio</a></li>
 
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
@@ -266,6 +266,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="9.6" data-path="logistic-regression.html"><a href="logistic-regression.html#further-resources-2"><i class="fa fa-check"></i><b>9.6</b> Further resources</a></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="wrapping-up.html"><a href="wrapping-up.html"><i class="fa fa-check"></i><b>10</b> Wrapping up</a></li>
+<li class="chapter" data-level="11" data-path="homework-activities.html"><a href="homework-activities.html"><i class="fa fa-check"></i><b>11</b> Homework Activities</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="homework-activities.html"><a href="homework-activities.html#general-instructions"><i class="fa fa-check"></i><b>11.1</b> General instructions</a></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -278,7 +282,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Data Analysis in R &amp; Studio</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Data Analysis in R &amp; RStudio</a>
           </h1>
         </div>
 
@@ -290,7 +294,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1><span class="header-section-number">Chapter 1</span> A first lesson about R<a href="a-first-lesson-about-r.html#a-first-lesson-about-r" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <div id="install-r-rstudio" class="section level2 hasAnchor" number="1.1">
 <h2><span class="header-section-number">1.1</span> Install R &amp; RStudio<a href="a-first-lesson-about-r.html#install-r-rstudio" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>We recommend that you use your own laptops for this course. If you have not already, then please download and install R and R Studio onto your laptops.
+<p>We recommend that you use your own laptops for this course. If you have not already, then please download and install R and RStudio onto your laptops.
 - click <a href="https://www.youtube.com/watch?v=eD07NznguA4">here</a> for instructions using Windows or
 - <a href="https://www.youtube.com/watch?v=cX532N_XLIs&amp;list=PLqzoL9-eJTNDw71zWePXyHx3_cm_fMP8S">here</a> for instructions using a Mac. If you are using a Mac it would be convenient that you use the most up to date version of OS or, at least one compatible with the most recent version of R. Read <a href="">this</a> if you want to check how to do that.</p>
 <p>If you prefer, you can always use any of the PCs in the computer cluster. All of them already have the software installed.</p>
@@ -651,25 +655,25 @@ As indicated above, the window in the bottom left corner is the main <strong>con
 <p>You will need to install it before anything else. Use the code you have learnt to do so and then load it. I won’t be providing you the code for it, by now you should now how to do this.</p>
 <p>Once you have loaded the <em>skimr</em> package you can use it. Its main function is <em>skim</em>. Like <em>summary</em> for data frames, skim presents results for all the columns and the statistics will depend on the class of the variable. However, the results are displayed and stored in a nicer way - though we won’t get into the details of this right now.</p>
 <div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="a-first-lesson-about-r.html#cb59-1" aria-hidden="true" tabindex="-1"></a><span class="fu">skim</span>(hate_crimes)</span></code></pre></div>
-<table>
+<table style="width:100%;">
 <colgroup>
 <col width="3%" />
-<col width="10%" />
+<col width="11%" />
 <col width="3%" />
-<col width="5%" />
 <col width="5%" />
 <col width="5%" />
 <col width="5%" />
 <col width="6%" />
 <col width="7%" />
-<col width="4%" />
-<col width="4%" />
-<col width="4%" />
-<col width="4%" />
-<col width="4%" />
-<col width="4%" />
-<col width="4%" />
-<col width="14%" />
+<col width="8%" />
+<col width="5%" />
+<col width="5%" />
+<col width="5%" />
+<col width="5%" />
+<col width="5%" />
+<col width="5%" />
+<col width="5%" />
+<col width="5%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -748,7 +752,7 @@ As indicated above, the window in the bottom left corner is the main <strong>con
 <td align="right">5.491600e+04</td>
 <td align="right">6.071900e+04</td>
 <td align="right">76165.000000</td>
-<td align="left">&lt;U+2582&gt;&lt;U+2586&gt;&lt;U+2587&gt;&lt;U+2585&gt;&lt;U+2582&gt;</td>
+<td align="left">▂▆▇▅▂</td>
 </tr>
 <tr class="even">
 <td align="left">numeric</td>
@@ -767,7 +771,7 @@ As indicated above, the window in the bottom left corner is the main <strong>con
 <td align="right">5.100000e-02</td>
 <td align="right">5.750000e-02</td>
 <td align="right">0.073000</td>
-<td align="left">&lt;U+2585&gt;&lt;U+2587&gt;&lt;U+2587&gt;&lt;U+2587&gt;&lt;U+2582&gt;</td>
+<td align="left">▅▇▇▇▂</td>
 </tr>
 <tr class="odd">
 <td align="left">numeric</td>
@@ -786,7 +790,7 @@ As indicated above, the window in the bottom left corner is the main <strong>con
 <td align="right">7.900000e-01</td>
 <td align="right">8.950000e-01</td>
 <td align="right">1.000000</td>
-<td align="left">&lt;U+2581&gt;&lt;U+2582&gt;&lt;U+2585&gt;&lt;U+2586&gt;&lt;U+2587&gt;</td>
+<td align="left">▁▂▅▆▇</td>
 </tr>
 <tr class="even">
 <td align="left">numeric</td>
@@ -805,7 +809,7 @@ As indicated above, the window in the bottom left corner is the main <strong>con
 <td align="right">8.740000e-01</td>
 <td align="right">8.980000e-01</td>
 <td align="right">0.918000</td>
-<td align="left">&lt;U+2583&gt;&lt;U+2585&gt;&lt;U+2583&gt;&lt;U+2586&gt;&lt;U+2587&gt;</td>
+<td align="left">▃▅▃▆▇</td>
 </tr>
 <tr class="odd">
 <td align="left">numeric</td>
@@ -824,7 +828,7 @@ As indicated above, the window in the bottom left corner is the main <strong>con
 <td align="right">4.500000e-02</td>
 <td align="right">8.000000e-02</td>
 <td align="right">0.130000</td>
-<td align="left">&lt;U+2587&gt;&lt;U+2586&gt;&lt;U+2586&gt;&lt;U+2582&gt;&lt;U+2582&gt;</td>
+<td align="left">▇▆▆▂▂</td>
 </tr>
 <tr class="even">
 <td align="left">numeric</td>
@@ -843,7 +847,7 @@ As indicated above, the window in the bottom left corner is the main <strong>con
 <td align="right">9.000000e-02</td>
 <td align="right">1.000000e-01</td>
 <td align="right">0.170000</td>
-<td align="left">&lt;U+2582&gt;&lt;U+2587&gt;&lt;U+2583&gt;&lt;U+2582&gt;&lt;U+2581&gt;</td>
+<td align="left">▂▇▃▂▁</td>
 </tr>
 <tr class="odd">
 <td align="left">numeric</td>
@@ -862,7 +866,7 @@ As indicated above, the window in the bottom left corner is the main <strong>con
 <td align="right">4.540000e-01</td>
 <td align="right">4.665000e-01</td>
 <td align="right">0.532000</td>
-<td align="left">&lt;U+2586&gt;&lt;U+2587&gt;&lt;U+2585&gt;&lt;U+2581&gt;&lt;U+2581&gt;</td>
+<td align="left">▆▇▅▁▁</td>
 </tr>
 <tr class="even">
 <td align="left">numeric</td>
@@ -881,7 +885,7 @@ As indicated above, the window in the bottom left corner is the main <strong>con
 <td align="right">2.800000e-01</td>
 <td align="right">4.200000e-01</td>
 <td align="right">0.810000</td>
-<td align="left">&lt;U+2587&gt;&lt;U+2587&gt;&lt;U+2586&gt;&lt;U+2582&gt;&lt;U+2581&gt;</td>
+<td align="left">▇▇▆▂▁</td>
 </tr>
 <tr class="odd">
 <td align="left">numeric</td>
@@ -900,7 +904,7 @@ As indicated above, the window in the bottom left corner is the main <strong>con
 <td align="right">4.900000e-01</td>
 <td align="right">5.750000e-01</td>
 <td align="right">0.700000</td>
-<td align="left">&lt;U+2581&gt;&lt;U+2581&gt;&lt;U+2586&gt;&lt;U+2587&gt;&lt;U+2587&gt;</td>
+<td align="left">▁▁▆▇▇</td>
 </tr>
 <tr class="even">
 <td align="left">numeric</td>
@@ -919,7 +923,7 @@ As indicated above, the window in the bottom left corner is the main <strong>con
 <td align="right">2.261971e-01</td>
 <td align="right">3.569347e-01</td>
 <td align="right">1.522302</td>
-<td align="left">&lt;U+2587&gt;&lt;U+2582&gt;&lt;U+2581&gt;&lt;U+2581&gt;&lt;U+2581&gt;</td>
+<td align="left">▇▂▁▁▁</td>
 </tr>
 <tr class="odd">
 <td align="left">numeric</td>
@@ -938,7 +942,7 @@ As indicated above, the window in the bottom left corner is the main <strong>con
 <td align="right">1.987068e+00</td>
 <td align="right">3.184344e+00</td>
 <td align="right">10.953480</td>
-<td align="left">&lt;U+2587&gt;&lt;U+2585&gt;&lt;U+2581&gt;&lt;U+2581&gt;&lt;U+2581&gt;</td>
+<td align="left">▇▅▁▁▁</td>
 </tr>
 </tbody>
 </table>

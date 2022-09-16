@@ -4,26 +4,26 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 8 An introduction to regression | Data Analysis in R &amp; Studio</title>
-  <meta name="description" content="This is the course material for Data Analysis in R &amp; Studio." />
+  <title>Chapter 8 An introduction to regression | Data Analysis in R &amp; RStudio</title>
+  <meta name="description" content="This is the course material for Data Analysis in R &amp; RStudio." />
   <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 8 An introduction to regression | Data Analysis in R &amp; Studio" />
+  <meta property="og:title" content="Chapter 8 An introduction to regression | Data Analysis in R &amp; RStudio" />
   <meta property="og:type" content="book" />
   
-  <meta property="og:description" content="This is the course material for Data Analysis in R &amp; Studio." />
+  <meta property="og:description" content="This is the course material for Data Analysis in R &amp; RStudio." />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 8 An introduction to regression | Data Analysis in R &amp; Studio" />
+  <meta name="twitter:title" content="Chapter 8 An introduction to regression | Data Analysis in R &amp; RStudio" />
   
-  <meta name="twitter:description" content="This is the course material for Data Analysis in R &amp; Studio." />
+  <meta name="twitter:description" content="This is the course material for Data Analysis in R &amp; RStudio." />
   
 
 <meta name="author" content="Reka Solymosi and Eon Kim (based on material developed with Juanjo Medina)" />
 
 
-<meta name="date" content="2022-09-15" />
+<meta name="date" content="2022-09-16" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -133,7 +133,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">Data Analysis in R & Studio</a></li>
+<li><a href="./">Data Analysis in R & RStudio</a></li>
 
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
@@ -266,6 +266,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="9.6" data-path="logistic-regression.html"><a href="logistic-regression.html#further-resources-2"><i class="fa fa-check"></i><b>9.6</b> Further resources</a></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="wrapping-up.html"><a href="wrapping-up.html"><i class="fa fa-check"></i><b>10</b> Wrapping up</a></li>
+<li class="chapter" data-level="11" data-path="homework-activities.html"><a href="homework-activities.html"><i class="fa fa-check"></i><b>11</b> Homework Activities</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="homework-activities.html"><a href="homework-activities.html#general-instructions"><i class="fa fa-check"></i><b>11.1</b> General instructions</a></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -278,7 +282,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Data Analysis in R &amp; Studio</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Data Analysis in R &amp; RStudio</a>
           </h1>
         </div>
 
@@ -343,16 +347,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb531"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb531-1"><a href="an-introduction-to-regression.html#cb531-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
 <span id="cb531-2"><a href="an-introduction-to-regression.html#cb531-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df, <span class="fu">aes</span>(<span class="at">x =</span> viol_r)) <span class="sc">+</span></span>
 <span id="cb531-3"><a href="an-introduction-to-regression.html#cb531-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>()</span></code></pre></div>
-<p><img src="08-regression_new_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<p><img src="08-regression_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
 <p>As you can see is skewed. Violence is our target variable, the one we want to better understand. You may remember from when we cover ANOVA that some times we have to make transformations to variables so that the assumptions of the models we use are better respected. We will discuss this a bit in greater depth later. For now, just trust us in that rather than using <em>viol_r</em> we are going to use the logarithmic transformation of the violence rate, <em>log_viol_r</em>.</p>
 <div class="sourceCode" id="cb532"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb532-1"><a href="an-introduction-to-regression.html#cb532-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
 <span id="cb532-2"><a href="an-introduction-to-regression.html#cb532-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df, <span class="fu">aes</span>(<span class="at">x =</span> log_viol_r)) <span class="sc">+</span></span>
 <span id="cb532-3"><a href="an-introduction-to-regression.html#cb532-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>()</span></code></pre></div>
-<p><img src="08-regression_new_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<p><img src="08-regression_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
 <p>Let’s look at the scatterplot between the log of the violence rate and unemployment:</p>
 <div class="sourceCode" id="cb533"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb533-1"><a href="an-introduction-to-regression.html#cb533-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df, <span class="fu">aes</span>(<span class="at">x =</span> unemployed, <span class="at">y =</span> log_viol_r)) <span class="sc">+</span></span>
 <span id="cb533-2"><a href="an-introduction-to-regression.html#cb533-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha=</span>.<span class="dv">2</span>, <span class="at">position=</span><span class="st">&quot;jitter&quot;</span>) </span></code></pre></div>
-<p><img src="08-regression_new_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<p><img src="08-regression_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
 <p>What do you think when looking at this scatterplot? Is there a relationship between violence and unemployment? Does it look as if cities that have a high score on the X axis (unemployment) also have a high score on the Y axis (violent crime)? It may be a bit hard to see but I would think there is certainly a trend.</p>
 </div>
 <div id="motivating-regression" class="section level2 hasAnchor" number="8.2">
@@ -362,7 +366,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb534-2"><a href="an-introduction-to-regression.html#cb534-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_density</span>() <span class="sc">+</span></span>
 <span id="cb534-3"><a href="an-introduction-to-regression.html#cb534-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="fl">6.061</span>, <span class="at">linetype =</span> <span class="st">&quot;dashed&quot;</span>, <span class="at">size =</span> <span class="dv">1</span>, <span class="at">color=</span><span class="st">&quot;red&quot;</span>) <span class="sc">+</span></span>
 <span id="cb534-4"><a href="an-introduction-to-regression.html#cb534-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;Density estimate and mean of log violent crime rate&quot;</span>)</span></code></pre></div>
-<p><img src="08-regression_new_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<p><img src="08-regression_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
 <div class="sourceCode" id="cb535"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb535-1"><a href="an-introduction-to-regression.html#cb535-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(df<span class="sc">$</span>log_viol_r)</span></code></pre></div>
 <pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
 ##   3.831   5.532   6.149   6.061   6.595   7.634</code></pre>
@@ -372,14 +376,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>If we plot the conditional means we can see that the mean <em>log_viol_r</em> for cities that report an unemployment of 9 is around 6.5. So you may be better off guessing that.</p>
 <pre><code>## Warning: Ignoring unknown parameters: fun.y</code></pre>
 <pre><code>## No summary function supplied, defaulting to `mean_se()`</code></pre>
-<p><img src="08-regression_new_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+<p><img src="08-regression_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
 <p>Linear regression tackles this problem using a slightly different approach. Rather than focusing on the conditional mean (smoothed or not), it draws a straight line that tries to capture the trend in the data. If we focus in the region of the scatterplot that are less sparse we see that this is an upward trend, suggesting that as the level of unemployment increases so does the level of violent crime.</p>
 <p>Simple linear regression draws a single straight line of predicted values <strong>as the model for the data</strong>. This line would be a <strong>model</strong>, a <em>simplification</em> of the real world like any other model (e.g., a toy pistol, an architectural drawing, a subway map), that assumes that there is approximately a linear relationship between X and Y. Let’s draw the regression line:</p>
 <div class="sourceCode" id="cb539"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb539-1"><a href="an-introduction-to-regression.html#cb539-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> df, <span class="fu">aes</span>(<span class="at">x =</span> unemployed, <span class="at">y =</span> log_viol_r)) <span class="sc">+</span></span>
 <span id="cb539-2"><a href="an-introduction-to-regression.html#cb539-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> .<span class="dv">2</span>, <span class="at">position =</span> <span class="st">&quot;jitter&quot;</span>) <span class="sc">+</span></span>
 <span id="cb539-3"><a href="an-introduction-to-regression.html#cb539-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> <span class="cn">FALSE</span>, <span class="at">color =</span> <span class="st">&quot;red&quot;</span>, <span class="at">size =</span> <span class="dv">1</span>) </span></code></pre></div>
 <pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
-<p><img src="08-regression_new_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
+<p><img src="08-regression_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
 <p>The <code>geom_smooth</code> function asks for a geom with the regression line, <code>method=lm</code> asks for the linear regression line, <code>se=FALSE</code> asks for just the line to be printed, the other arguments specify the colour and thickness of the line.</p>
 <p>What that line is doing is giving you guesses (predictions) for the values of violent crime based in the information that we have about the level of unemployment. It gives you one possible guess for the value of violence for every possible value of unemployment and links them all together in a straight line.</p>
 <p>Another way of thinking about this line is as the best possible summary of the cloud of points that are represented in the scatterplot (if we can assume that a straight line would do a good job doing this). If I were to tell you to draw a straight line that best represents this pattern of points the regression line would be the one that best does it (if certain assumptions are met).</p>
@@ -387,7 +391,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <pre><code>## Warning: Ignoring unknown parameters: fun.y</code></pre>
 <pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
 <pre><code>## No summary function supplied, defaulting to `mean_se()`</code></pre>
-<p><img src="08-regression_new_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+<p><img src="08-regression_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
 <p>As De Veaux et al (2012: 179) highlight: “like all models of the real world, the line will be wrong, wrong in the sense that it can’t match reality exactly. But it can help us understand how the variables are associated”. A map is never a perfect representation of the world, the same happens with statistical models. Yet, as with maps, models can be helpful.</p>
 </div>
 <div id="fitting-a-simple-regression-model" class="section level2 hasAnchor" number="8.3">
@@ -541,7 +545,7 @@ y = b0 + b1x + residuals</p>
 <p>We can explore if particularly large cities have higher rates of violence (remember a rate controls for population size, so if this were to be significant it would be telling us that it’s not just because there is more people in them!). This is how you would express the model:</p>
 <div class="sourceCode" id="cb571"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb571-1"><a href="an-introduction-to-regression.html#cb571-1" aria-hidden="true" tabindex="-1"></a>fit_2 <span class="ot">&lt;-</span> <span class="fu">lm</span>(log_viol_r <span class="sc">~</span> largest50, <span class="at">data=</span>df)</span></code></pre></div>
 <p>Notice that there is nothing different in how we ask for the model. And see below the regression line:</p>
-<p><img src="08-regression_new_files/figure-html/unnamed-chunk-24-1.png" width="672" /></p>
+<p><img src="08-regression_files/figure-html/unnamed-chunk-24-1.png" width="672" /></p>
 <p>Although in the plot we still see a line, what we are really estimating here is the average of <em>log_viol_r</em> for each of the two categories.</p>
 <p>Let’s have a look at the results:</p>
 <div class="sourceCode" id="cb572"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb572-1"><a href="an-introduction-to-regression.html#cb572-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(fit_2)</span></code></pre></div>
@@ -632,15 +636,15 @@ If you want to change this you may need to reorder the levels. See <a href="http
 <p>Communicating your results in a clear manner is incredibly important. We have seen the tabular results produced by R. If you want to use them in a paper you may need to do some tidying up of those results. There are a number of packages (<code>textreg</code>, <code>stargazer</code>) that automatise that process. They take your <code>lm</code> objects and produce tables that you can put straight away in your reports or papers. One popular trend in presenting results is the <strong>coefficient plot</strong> as an alternative to the table of regression coefficients. There are various ways of producing coefficient plots with R for a variety of models. See <a href="http://www.carlislerainey.com/2012/06/30/coefficient-plots-in-r/">here</a> and <a href="http://www.carlislerainey.com/2012/07/03/an-improvement-to-coefficient-plots/">here</a>, for example.</p>
 <p>We are going to use instead the <code>plot_model()</code> function of the <code>sjPlot</code> package, that makes it easier to produce this sort of plots. You can find a more detailed tutorial about this function <a href="http://rpubs.com/sjPlot/sjplm">here</a>. See below for an example:</p>
 <div class="sourceCode" id="cb582"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb582-1"><a href="an-introduction-to-regression.html#cb582-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sjPlot)</span></code></pre></div>
-<pre><code>## Learn more about sjPlot with &#39;browseVignettes(&quot;sjPlot&quot;)&#39;.</code></pre>
+<pre><code>## #refugeeswelcome</code></pre>
 <p>Let’s try with a more complex example:</p>
 <div class="sourceCode" id="cb584"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb584-1"><a href="an-introduction-to-regression.html#cb584-1" aria-hidden="true" tabindex="-1"></a>fit_4 <span class="ot">&lt;-</span> <span class="fu">lm</span>(log_viol_r <span class="sc">~</span> unemployed <span class="sc">+</span> largest50 <span class="sc">+</span> black <span class="sc">+</span> fborn <span class="sc">+</span> log_incarceraton, <span class="at">data=</span>df)</span>
 <span id="cb584-2"><a href="an-introduction-to-regression.html#cb584-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_model</span>(fit_4)</span></code></pre></div>
-<p><img src="08-regression_new_files/figure-html/unnamed-chunk-30-1.png" width="672" /></p>
+<p><img src="08-regression_files/figure-html/unnamed-chunk-30-1.png" width="672" /></p>
 <!-- Be advised to use these plots judiciously. There may be other sort of plots that may be [more appropriate](http://www.carlislerainey.com/2012/07/06/why-i-dont-like-coefficient-plots/) for what you want to communicate to your audience than the coefficient plot.-->
 <p>You can further customise this:</p>
 <div class="sourceCode" id="cb585"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb585-1"><a href="an-introduction-to-regression.html#cb585-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_model</span>(fit_4, <span class="at">title=</span><span class="st">&quot;Violence across cities&quot;</span>)</span></code></pre></div>
-<p><img src="08-regression_new_files/figure-html/unnamed-chunk-31-1.png" width="672" /></p>
+<p><img src="08-regression_files/figure-html/unnamed-chunk-31-1.png" width="672" /></p>
 <p>What you see plotted here is the point estimates (the circles), the confidence intervals around those estimates (the longer the line the less precise the estimate), and the colours represent whether the effect is negative (red) or positive (blue). There are other packages that also provide similar functionality, like the <code>dotwhisker</code> package that you may want to explore, see more details <a href="https://cran.r-project.org/web/packages/dotwhisker/vignettes/dotwhisker-vignette.html">here</a>.</p>
 <p>The <code>sjPlot</code> package also allows you to produce html tables for more professional presentation of your regression tables. For this we use the <code>tab_model()</code> function. This kind of tabulation may be particularly helpful for your final assignment.</p>
 <div class="sourceCode" id="cb586"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb586-1"><a href="an-introduction-to-regression.html#cb586-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tab_model</span>(fit_4)</span></code></pre></div>
@@ -1026,7 +1030,7 @@ R<sup>2</sup> / R<sup>2</sup> adjusted
 <pre><code>## lattice theme set by effectsTheme()
 ## See ?effectsTheme for details.</code></pre>
 <div class="sourceCode" id="cb592"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb592-1"><a href="an-introduction-to-regression.html#cb592-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">allEffects</span>(fit_3), <span class="at">ask=</span><span class="cn">FALSE</span>)</span></code></pre></div>
-<p><img src="08-regression_new_files/figure-html/unnamed-chunk-35-1.png" width="672" /></p>
+<p><img src="08-regression_files/figure-html/unnamed-chunk-35-1.png" width="672" /></p>
 <p>Notice that the line has a confidence interval drawn around it (to reflect the likely impact of sampling variation) and that the predicted means for smaller and largest cities (when controlling for unemployment) also have a confidence interval.</p>
 <p>##Rescaling input variables to assist interpretation</p>
 <p>The interpretation or regression coefficients is sensitive to the scale of measurement of the predictors. This means one cannot compare the magnitude of the coefficients to compare the relevance of variables to predict the response variable. Let’s look at the more recent model, how can we tell what predictors have a stronger effect?</p>
@@ -1107,7 +1111,7 @@ R<sup>2</sup> / R<sup>2</sup> adjusted
 <p>You see here that essentially you have only two inputs (perceptions of the area and sex) but several regression coefficients. Gelman and Hill (2007) suggest reserving the term input for the variables encoding the information and to use the term predictor to refer to each of the terms in the model. So here we have two inputs and four predictors (one for the constant term, one for unemployment, another for the largest 50 dummy, and a final one for the interaction effect).</p>
 <p>In this case the test for the interaction effect is non-significant, which suggests there isn’t such an interaction. The R squared barely changes. Let’s visualise the results with the <code>effects</code> package:</p>
 <div class="sourceCode" id="cb599"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb599-1"><a href="an-introduction-to-regression.html#cb599-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">allEffects</span>(fit_5), <span class="at">ask=</span><span class="cn">FALSE</span>)</span></code></pre></div>
-<p><img src="08-regression_new_files/figure-html/unnamed-chunk-39-1.png" width="672" /></p>
+<p><img src="08-regression_files/figure-html/unnamed-chunk-39-1.png" width="672" /></p>
 <p>Notice that essentially what we are doing is running two regression lines and testing whether the slope is different for the two groups. The intercept is different, we know that largest cities are more violent, but what we are testing here is whether violence goes up in a steeper fashion (and in the same direction) for one or the other group as unemployment goes up. We see that’s not the case here. The estimated lines are almost parallel.</p>
 <p>A word of warning, the moment you introduce an interaction effect the meaning of the coefficients for the other predictors changes (what it is often referred as to the “main effects” as opposed to the interaction effect). You cannot retain the interpretation we introduced earlier. Now, for example, the coefficient for the <em>largest50</em> variable relates the marginal effect of this variable when <em>unemployment</em> equals zero. The typical table of results helps you to understand whether the effects are significant but offers little of interest that will help you to meaningfully interpret what the effects are. For this is better you use some of the graphical displays we have covered.</p>
 <p>Essentially what happens is that the regression coefficients that get printed are interpretable only for certain groups. So now:</p>

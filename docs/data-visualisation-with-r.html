@@ -4,26 +4,26 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 3 Data visualisation with R | Data Analysis in R &amp; Studio</title>
-  <meta name="description" content="This is the course material for Data Analysis in R &amp; Studio." />
+  <title>Chapter 3 Data visualisation with R | Data Analysis in R &amp; RStudio</title>
+  <meta name="description" content="This is the course material for Data Analysis in R &amp; RStudio." />
   <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 3 Data visualisation with R | Data Analysis in R &amp; Studio" />
+  <meta property="og:title" content="Chapter 3 Data visualisation with R | Data Analysis in R &amp; RStudio" />
   <meta property="og:type" content="book" />
   
-  <meta property="og:description" content="This is the course material for Data Analysis in R &amp; Studio." />
+  <meta property="og:description" content="This is the course material for Data Analysis in R &amp; RStudio." />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 3 Data visualisation with R | Data Analysis in R &amp; Studio" />
+  <meta name="twitter:title" content="Chapter 3 Data visualisation with R | Data Analysis in R &amp; RStudio" />
   
-  <meta name="twitter:description" content="This is the course material for Data Analysis in R &amp; Studio." />
+  <meta name="twitter:description" content="This is the course material for Data Analysis in R &amp; RStudio." />
   
 
 <meta name="author" content="Reka Solymosi and Eon Kim (based on material developed with Juanjo Medina)" />
 
 
-<meta name="date" content="2022-09-15" />
+<meta name="date" content="2022-09-16" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -133,7 +133,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">Data Analysis in R & Studio</a></li>
+<li><a href="./">Data Analysis in R & RStudio</a></li>
 
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
@@ -266,6 +266,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="9.6" data-path="logistic-regression.html"><a href="logistic-regression.html#further-resources-2"><i class="fa fa-check"></i><b>9.6</b> Further resources</a></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="wrapping-up.html"><a href="wrapping-up.html"><i class="fa fa-check"></i><b>10</b> Wrapping up</a></li>
+<li class="chapter" data-level="11" data-path="homework-activities.html"><a href="homework-activities.html"><i class="fa fa-check"></i><b>11</b> Homework Activities</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="homework-activities.html"><a href="homework-activities.html#general-instructions"><i class="fa fa-check"></i><b>11.1</b> General instructions</a></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -278,7 +282,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Data Analysis in R &amp; Studio</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Data Analysis in R &amp; RStudio</a>
           </h1>
         </div>
 
@@ -328,12 +332,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb120-6"><a href="data-visualisation-with-r.html#cb120-6" aria-hidden="true" tabindex="-1"></a>fbo <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="fu">url</span>(fbo_url))</span></code></pre></div>
 <pre><code>## New names:
 ## Rows: 119 Columns: 4
-## -- Column specification
-## -------------------------------------------------------- Delimiter: &quot;,&quot; chr
+## ── Column specification
+## ──────────────────────────────────────────────────────── Delimiter: &quot;,&quot; chr
 ## (2): Club.Supported, League.of.the.Club.Supported dbl (2): ...1, Banning.Orders
-## i Use `spec()` to retrieve the full column specification for this data. i
+## ℹ Use `spec()` to retrieve the full column specification for this data. ℹ
 ## Specify the column types or set `show_col_types = FALSE` to quiet this message.
-## * `` -&gt; `...1`</code></pre>
+## • `` -&gt; `...1`</code></pre>
 <p>You can also find this on the Blackboard page for this week’s learning materials. If you download from there, make sure to save this file in your project directory, possibly in a subfolder called “Datasets”. Then you can read in from there.</p>
 <p>One thing from the first lab we mentioned is conventions in the naming ob objects. This also applies to the names of your variables (i.e. your column names) within your data. If you look at the fbo dataframe, either with the <code>View()</code> function, or by printing the names of the columns with the <code>names()</code> function, you can see, this dataset violates that requirement:</p>
 <div class="sourceCode" id="cb122"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb122-1"><a href="data-visualisation-with-r.html#cb122-1" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(fbo)</span></code></pre></div>
