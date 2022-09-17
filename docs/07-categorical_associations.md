@@ -1,4 +1,4 @@
-# Studying relationships between two factors
+# Week 5: Studying relationships between two factors
 
 ## Producing cross tabulations
 

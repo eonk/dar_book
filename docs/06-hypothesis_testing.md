@@ -1,4 +1,4 @@
-# Hypotheses
+# Week 4: Hypotheses
 
 
 ## The logic of hypothesis testing
@@ -621,7 +621,7 @@ For this we need to install the package that he has created for implementing the
 
 
 ```r
-library("WRS2") 
+install.packages("WRS2")
 ```
 
 We can now invoke the code. The following code will use ANOVA based on 5% trimmed mean with 599 bootstrap samples:
@@ -641,8 +641,8 @@ t1waybt(tcviolent ~ ethgrp2, data = BCS0708, tr = .05, nboot = 599)
 ## 
 ## Test statistic: 45.3591 
 ## p-value: 0 
-## Variance explained: 0.081 
-## Effect size: 0.285
+## Variance explained: 0.074 
+## Effect size: 0.272
 ```
 
 As with the standard ANOVA and the Welch version, we still get a significant result.

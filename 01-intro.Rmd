@@ -1,4 +1,4 @@
-# A first lesson about R
+# Week 0: A first lesson about R
 
 ## Install R & RStudio
 
@@ -46,7 +46,7 @@ Click in the *Tools* menu and select *Global options*. This will open up a pop u
 
 ## Getting organised: R Projects
 
-Whenever you do analysis you will be working with a variety of files. You may have an Excel dataset (or some other type of dataset file, like csv for example), a Microsoft Word file where you are writing down the essay with your results, but also a script with all the progamming code you have been using. R needs to know where all these files sit in your computer. Often you will get error messages because you are expecting R to find one of these files in the wrong location. **It is absolutely critical thus that you understand how your computer organises and store files.** Please watch the video below to understand the basics of file management and file paths: 
+Whenever you do analysis you will be working with a variety of files. You may have an Excel data set (or some other type of data set file, like csv for example), a Microsoft Word file where you are writing down the essay with your results, but also a script with all the programming code you have been using. R needs to know where all these files sit in your computer. Often you will get error messages because you are expecting R to find one of these files in the wrong location. **It is absolutely critical thus that you understand how your computer organises and store files.** Please watch the video below to understand the basics of file management and file paths: 
 
 [Windows users](https://www.top-windows-tutorials.com/file-paths/)
 [MAC users](https://www.switchingtomac.com/tutorials/osx/5-ways-to-reveal-the-path-of-a-file-on-macos/)
@@ -94,7 +94,7 @@ So far we hace covered an introduction to the main interface you will be using a
 Let's write some very simple code using R to talk to your computer. First open a new script within the project you just created. Type the following instructions in the script window. After you are done click in the top right corner where it says *Run* (if you prefer quick shortcuts, you can select the text and then press Ctrl +  Enter):
 
 ```{r}
-print("I hate computers")
+print("I love stats")
 ```
 
 Congratulations!!! You just run your first line of R code! 
@@ -145,8 +145,7 @@ Every beginner in R will find these help files a bit confusing. But after a whil
 Let's try to use some of the functions of this package. We will use the "say" function:
 
 ```{r, eval=FALSE}
-say("I hate computers")
-
+say("I love stats")
 ```
 
 You will get an error message telling you that this function could not be found. What happened?? This will be the first of many error messages you will get. An error message is the computer way of telling you that your instructions are somehow incomplete or problematic and, thus, is unable to do what you ask. It is frustrating to get these messages and a critical skill for you this semester will be to overcome that frustration and try to understand why the computer cannot do what you ask. Finding out the source of the error and solving it is what these labs are all about. There is nothing wrong with getting errors. The problem is if you give up and let your frustration get the best of you.
@@ -172,13 +171,13 @@ library("cowsay")
 Run the `search` function again. You will see now this package is listed. So now we can try using the function "say" again.
 
 ```{r}
-say("I hate computers")
+say("I love stats")
 ```
 
 You get a random animal in the console repeating the text we passed as an argument. If we like a different animal we could pass an argument to select it. So, say, we want to have cow rather than a random animal, then we would pass the following arguments to our function.
 
 ```{r}
-say("I hate computers", "cow")
+say("I love stats", "cow")
 ```
 
 This is an important feature of arguments in functions. We said how different functions admits different arguments. Here by specifying `cow` the function is printing that particular animal. But who is it that when we didn't specify a particular kind of animal we still got a result? That happened because functions always have default arguments that are necessary for them to run and that you do not have to make explicit. Default arguments are implicit and do not have to be typed. The `say` function has a default argument `random` which will print a random character or animal. It is only when you want to change the default that you need to make an alternative animal explicit.
@@ -193,11 +192,11 @@ An **object**? What do I mean? In the same way that everything you do in R you d
 
 ```{r}
 
-my_text <- "I hate computers."
+my_text <- "I love stats."
 
 ```
 
-This bit of code is simply telling R we are creating a new object with the assigned name ("my_text"). We are creating a box with such name and inside this box we are placing a bit of text ("I hate computers"). The arrow you see is the **assignment operator**. This is an important part of the R language that tells R what we are including inside the object in question. 
+This bit of code is simply telling R we are creating a new object with the assigned name ("my_text"). We are creating a box with such name and inside this box we are placing a bit of text ("I love stats"). The arrow you see is the **assignment operator**. This is an important part of the R language that tells R what we are including inside the object in question. 
 
 Run the code. Look now at the *Environment* window in the right top corner. We see that this object is now listed there. You can think of the Environment as a warehouse where you put stuff in, your different objects. Is there a limit to this environment? Yes, your RAM. R works on your RAM, so you need to be aware that if you use very large objects you will need loads of RAM. But that won't be a problem you will encounter in this course unit.
 
@@ -209,7 +208,8 @@ say(my_text, "cow")
 
 ## More on objects 
 
-Now that we have covered some of the preliminaries we can move to talk about data. In Excel you are used to see your data in a spreadsheet format. If you did the prep for this session, you should have reviewed some of the materials we covered in *Making Sense of Criminological Data* last semester. You should be familiar with the notion of a data set, levels of measurement, and tidy data. If you have not. This is your chance to do it in [this link](https://rawgit.com/maczokni/MSCD/master/book/bookdown-demo-master/bookdown-demo-master/docs/week1.html#data-variables-and-observations).
+Now that we have covered some of the preliminaries we can move to talk about data. In Excel you are used to see your data in a spreadsheet format. If you need some recap
+, you should review some of the materials *Making Sense of Criminological Data* that is designed for UG students. This [chapter](https://rawgit.com/maczokni/MSCD/master/book/bookdown-demo-master/bookdown-demo-master/docs/week1.html#data-variables-and-observations) will be helpful to have a better understanding of the notion of a data set, levels of measurement, and tidy data.
 
 R is considerably more flexible than Excel. Most of the work we do here will use data sets or **dataframes** as they are called in R. But as you have seen earlier you can have *objects* other than data frames in R. These objects can relate to external files or simple textual information ("I hate computers"). This flexibility is a big asset because among other things it allow us to break down data frames or the results from doing analysis on them to its constitutive parts (this will become clearer as we go along).
 
@@ -229,14 +229,12 @@ You can see the content of the object `x` in the main console either by using th
 
 ```{r}
 x
-
 ```
 
 When writing expressions in R is very important you understand that **R is case sensitive**. This could drive you nuts if you are not careful. More often than not if you write an expression asking R to do something and R returns an error message, chances are that you have used lower case when upper case was needed (or vice-versa). So always check for the right spelling. For example, see what happens if I use a capital 'X':
 
 ```{r, error = TRUE}
 X
-
 ```
 
 You will get the following message: `"Error in eval(expr, envir, enclos): object 'X' not found"`. R is telling us that `X` does not exist. There isn't an object `X` (upper case), but there is an object `x` (lower case). Error messages in R are pretty good at telling you exactly what went wrong. 
@@ -247,7 +245,7 @@ When you get an error message or implausible results, you want to look back at y
 
 A handy tip is to cut and paste the error message into Google and find a solution. If anybody had given me a penny for every time I had to do that myself, I would be Bill Gates by now. You’re probably not the first person to make your mistake, after all, and someone on the internet has surely already found a solution to your issue. People make mistakes all the time. It's how we learn. Don't get frustrated, don't get stuck. Instead look for a solution. These days we have Google. We didn't back in the day. Now you have the answer to your frustration within quick reach. Use it to your advantage.
 
-##Vectors
+## Vectors
 
 In R there are different kind of objects. We will start with **vectors**. 
 
@@ -262,7 +260,6 @@ my_3rd_vector <- c(TRUE, FALSE) #creates a logical vector
 my_4th_vector <- c(T, F) #creates a logical vector using abbreviations of True and False, but you should avoid this formulation an instead use the full word.
 my_5th_vector <- c("a", "b", "c") #creates a character vector
 my_6th_vector <- c(1+0i, 2+4i) #creates a complex vector (we won't really use this class)
-
 ```
 
 Cut and paste this code into your script and run it. You will see how all these vectors are added to your global environment and stored there.
@@ -275,7 +272,6 @@ length(my_1st_vector) #a function to figure out the length of the vector
 my_1st_vector + 2 #Add a constant to each element of the vector
 my_7th_vector <- my_1st_vector + 1 #Create a new vector that contains the elements of my1stvector plus a constant of 1
 my_1st_vector + my_7th_vector #Adds the two vectors and auto-print the results (note how the sum was done)
-
 ```
 
 As indicated earlier, when you create objects you will place them in your working memory or workspace. Each R session will be associated to a workspace (called "global environment" in R Studio). In R Studio you can visualise the objects you have created during a session in the **Global Environment** screen. But if you want to produce a list of what's there you can use the `ls()` function (the results you get my differ from the ones below depending on what you actually have in your global environment).
@@ -301,7 +297,6 @@ If you mix in a vector elements that are of a different class (for example numer
 ```{r}
 my_8th_vector <- c(0.5, "a")
 class(my_8th_vector) #The class() function will tell us the class of the vector
-
 ```
 
 ## On comments
@@ -334,15 +329,12 @@ the_smiths #auto-print the factor
 the_smiths_bis <- c("Morrisey", "Marr", "Rourke", "Joyce") #create a character vector
 the_smiths_f <- as.factor(the_smiths_bis) #create a factor using a character vector
 the_smiths_f #auto-print factor
-
 ```
 
 Factors in R can be seen as vectors with a bit more information added. This extra information consists of a record of the distinct values in that vector, called **levels**. If you want to know the levels in a given factor you can use the `levels()` function:
 
 ```{r}
-
 levels(the_smiths)
-
 ```
 
 Notice that the levels appear printed by alphabetical order. There will be situations when this is not the most convenient order. Later on we will discuss in these tutorials how to reorder your factor levels when you need to.
@@ -366,9 +358,7 @@ It is also important to remember that R will always treat numbers as numbers. Th
 If you want, give it a try. Try to create a variable called 12 and assign it the value "twelve". As we did last week, we can assign something a meaning by using the "<-" characters.
 
 ```{r, error=TRUE}
-
 12 <- "twelve"
-
 ```
 
 You get an error!
@@ -385,7 +375,6 @@ Let's create a data frame with two variables:
 #We create a dataframe called mydata.1 with two variables, an integer vector called foo and a logical vector called bar
 mydata_1 <- data.frame(foo = 1:4, bar = c(T,T,F,F))
 mydata_1
-
 ```
 
 Or alternatively for the same result:
@@ -395,7 +384,6 @@ x <- 1:4
 y <- c(T, T, F, F)
 mydata_2 <- data.frame (foo = x, bar = y)
 mydata_2
-
 ```
 
 As you can see in R, as in any other language, there are multiple ways of saying the same thing. Programmers aim to produce code that has been optimised: it is short and quick. It is likely that as you develop your R skills you find increasingly more efficient ways of asking R how to do things. What this means too is that when you go for help, from your peers or us, we may teach you slightly different ways of getting the right result. As long as you get the right result that's what at this point really matters.
@@ -422,9 +410,7 @@ This function will search among all the *loaded* packages and locate the "hate_c
 Every object in R can have **attributes**. These are: names; dimensions (for matrices and arrays: number of rows and columns) and dimensions names; class of object (numeric, character, etc.); length (for a vector this will be the number of elements in the vector); and other user-defined. You can access the attributes of an object using the `attributes()` function. Let's query R for the attributes of this data frame.
 
 ```{r}
-
 attributes(hate_crimes)
-
 ```
 
 These results printed in the may console may not make too much sense to you at this point. We will return to this next week, so do not worry. 
@@ -443,7 +429,6 @@ Let's start with the *mean*. This function takes as an argument the numeric vari
 
 ```{r}
 mean(hate_crimes$share_vote_trump)
-
 ```
 
 This code is saying look inside the "hate_crimes" dataset object and find the "share_vote_trump" variable, then print the mean. The `$` is used when you want to find a particular component of an object. In the case of dataframes that component typically will be one of the vectors (variables). But we will see other uses for other kind of objects as we move through the course.
@@ -472,7 +457,6 @@ You will need to install it before anything else. Use the code you have learnt t
 
 ```{r, echo=FALSE}
 library(skimr)
-
 ```
 
 Once you have loaded the *skimr* package you can use it. Its main function is *skim*. Like *summary* for data frames, skim presents results for all the columns and the statistics will depend on the class of the variable. However, the results are displayed and stored in a nicer way - though we won't get into the details of this right now.
@@ -501,5 +485,4 @@ Keep in mind though that you should not then panic if you open your next R Studi
 
 What is more. I would suggest you go to the Tools drop down menu, select Global Options, and make sure you select "Never" where it says "Save workspace". Then click "Apply". This way you will never be asked to save what is in your global environment when you terminate a session.
 
-![](imgs/neversave.PNG) 
-
+![](imgs/neversave.PNG)

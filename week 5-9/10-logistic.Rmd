@@ -1,4 +1,4 @@
-# Logistic regression
+# Week 8: Logistic regression
 
 ## Introduction
 

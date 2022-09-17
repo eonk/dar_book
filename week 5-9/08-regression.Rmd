@@ -1,7 +1,6 @@
-# An introduction to regression
+# Week 6: An introduction to regression
 
 ## Introduction: models in scientific research
-
 
 In science one of our main concerns is to develop models of the world, models that help us to understand the world a bit better or to predict how things will develop better. You can read more about modelling in scientific research [here](https://www.visionlearning.com/en/library/Process-of-Science/49/Modeling-in-Scientific-Research/153). Statistics provides a set of tools that help researchers build and test scientific models.
 
@@ -22,8 +21,6 @@ We will use a new dataset today, specifically the data used by Patrick Sharkey a
 ```{r}
 data_url <- "https://dataverse.harvard.edu/api/access/datafile/:persistentId?persistentId=doi:10.7910/DVN/46WIH0/ARS2VS"
 sharkey <- read.table(url(data_url), sep = '\t',header = T)
-
-
 ```
 
 As before we create an object with the permanent `url` address and then we use a function to read the data into R. The data that can be saved using an `api` is in tab separated format. For this then we use the `read.table` function from base R. We pass two arguments to the function `sep= '\t'` is telling R this file is tab separated. The `header = T` function is telling R that is TRUE (T) that this file has a first row that acts as a header (this row has the name of the variables).
@@ -34,7 +31,6 @@ There are many more variables here that we are going to need, so let's do some f
 library(dplyr)
 df <- filter(sharkey, year == "2012")
 df <- select(df, place_name, state_name, viol_r, black, lesshs, unemployed, fborn, incarceration, log_incarceraton, swornftime_r, log_viol_r, largest50)
-
 ```
 
 So now we have a more manageable data set that we can use for this session. The file includes a sample of 264 US cities (see *place_name*) across 44 of states:
@@ -51,7 +47,6 @@ We are going to look at the relationship between violent crime with a variable m
 library(ggplot2)
 ggplot(df, aes(x = viol_r)) +
   geom_histogram()
-
 ```
 
 As you can see is skewed. Violence is our target variable, the one we want to better understand. You may remember from when we cover ANOVA that some times we have to make transformations to variables so that the assumptions of the models we use are better respected. We will discuss this a bit in greater depth later. For now, just trust us in that rather than using *viol_r* we are going to use the logarithmic transformation of the violence rate, *log_viol_r*.

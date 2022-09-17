@@ -1,7 +1,6 @@
-# An introduction to regression
+# Week 6: An introduction to regression
 
 ## Introduction: models in scientific research
-
 
 In science one of our main concerns is to develop models of the world, models that help us to understand the world a bit better or to predict how things will develop better. You can read more about modelling in scientific research [here](https://www.visionlearning.com/en/library/Process-of-Science/49/Modeling-in-Scientific-Research/153). Statistics provides a set of tools that help researchers build and test scientific models.
 
@@ -632,7 +631,7 @@ library(sjPlot)
 ```
 
 ```
-## #refugeeswelcome
+## Install package "strengejacke" from GitHub (`devtools::install_github("strengejacke/strengejacke")`) to load all sj-packages at once!
 ```
 
 Let's try with a more complex example:

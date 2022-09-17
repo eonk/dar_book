@@ -1,4 +1,4 @@
-# A first lesson about R
+# Week 0: A first lesson about R
 
 ## Install R & RStudio
 
@@ -46,7 +46,7 @@ Click in the *Tools* menu and select *Global options*. This will open up a pop u
 
 ## Getting organised: R Projects
 
-Whenever you do analysis you will be working with a variety of files. You may have an Excel dataset (or some other type of dataset file, like csv for example), a Microsoft Word file where you are writing down the essay with your results, but also a script with all the progamming code you have been using. R needs to know where all these files sit in your computer. Often you will get error messages because you are expecting R to find one of these files in the wrong location. **It is absolutely critical thus that you understand how your computer organises and store files.** Please watch the video below to understand the basics of file management and file paths: 
+Whenever you do analysis you will be working with a variety of files. You may have an Excel data set (or some other type of data set file, like csv for example), a Microsoft Word file where you are writing down the essay with your results, but also a script with all the programming code you have been using. R needs to know where all these files sit in your computer. Often you will get error messages because you are expecting R to find one of these files in the wrong location. **It is absolutely critical thus that you understand how your computer organises and store files.** Please watch the video below to understand the basics of file management and file paths: 
 
 [Windows users](https://www.top-windows-tutorials.com/file-paths/)
 [MAC users](https://www.switchingtomac.com/tutorials/osx/5-ways-to-reveal-the-path-of-a-file-on-macos/)
@@ -95,11 +95,11 @@ Let's write some very simple code using R to talk to your computer. First open a
 
 
 ```r
-print("I hate computers")
+print("I love stats")
 ```
 
 ```
-## [1] "I hate computers"
+## [1] "I love stats"
 ```
 
 Congratulations!!! You just run your first line of R code! 
@@ -150,7 +150,7 @@ Let's try to use some of the functions of this package. We will use the "say" fu
 
 
 ```r
-say("I hate computers")
+say("I love stats")
 ```
 
 You will get an error message telling you that this function could not be found. What happened?? This will be the first of many error messages you will get. An error message is the computer way of telling you that your instructions are somehow incomplete or problematic and, thus, is unable to do what you ask. It is frustrating to get these messages and a critical skill for you this semester will be to overcome that frustration and try to understand why the computer cannot do what you ask. Finding out the source of the error and solving it is what these labs are all about. There is nothing wrong with getting errors. The problem is if you give up and let your frustration get the best of you.
@@ -183,13 +183,13 @@ Run the `search` function again. You will see now this package is listed. So now
 
 
 ```r
-say("I hate computers")
+say("I love stats")
 ```
 
 ```
 ## 
 ##  -------------- 
-## I hate computers 
+## I love stats 
 ##  --------------
 ##     \
 ##       \
@@ -211,13 +211,13 @@ You get a random animal in the console repeating the text we passed as an argume
 
 
 ```r
-say("I hate computers", "cow")
+say("I love stats", "cow")
 ```
 
 ```
 ## 
 ##  ----- 
-## I hate computers 
+## I love stats 
 ##  ------ 
 ##     \   ^__^ 
 ##      \  (oo)\ ________ 
@@ -238,10 +238,10 @@ An **object**? What do I mean? In the same way that everything you do in R you d
 
 
 ```r
-my_text <- "I hate computers."
+my_text <- "I love stats."
 ```
 
-This bit of code is simply telling R we are creating a new object with the assigned name ("my_text"). We are creating a box with such name and inside this box we are placing a bit of text ("I hate computers"). The arrow you see is the **assignment operator**. This is an important part of the R language that tells R what we are including inside the object in question. 
+This bit of code is simply telling R we are creating a new object with the assigned name ("my_text"). We are creating a box with such name and inside this box we are placing a bit of text ("I love stats"). The arrow you see is the **assignment operator**. This is an important part of the R language that tells R what we are including inside the object in question. 
 
 Run the code. Look now at the *Environment* window in the right top corner. We see that this object is now listed there. You can think of the Environment as a warehouse where you put stuff in, your different objects. Is there a limit to this environment? Yes, your RAM. R works on your RAM, so you need to be aware that if you use very large objects you will need loads of RAM. But that won't be a problem you will encounter in this course unit.
 
@@ -255,7 +255,7 @@ say(my_text, "cow")
 ```
 ## 
 ##  ----- 
-## I hate computers. 
+## I love stats. 
 ##  ------ 
 ##     \   ^__^ 
 ##      \  (oo)\ ________ 
@@ -266,7 +266,8 @@ say(my_text, "cow")
 
 ## More on objects 
 
-Now that we have covered some of the preliminaries we can move to talk about data. In Excel you are used to see your data in a spreadsheet format. If you did the prep for this session, you should have reviewed some of the materials we covered in *Making Sense of Criminological Data* last semester. You should be familiar with the notion of a data set, levels of measurement, and tidy data. If you have not. This is your chance to do it in [this link](https://rawgit.com/maczokni/MSCD/master/book/bookdown-demo-master/bookdown-demo-master/docs/week1.html#data-variables-and-observations).
+Now that we have covered some of the preliminaries we can move to talk about data. In Excel you are used to see your data in a spreadsheet format. If you need some recap
+, you should review some of the materials *Making Sense of Criminological Data* that is designed for UG students. This [chapter](https://rawgit.com/maczokni/MSCD/master/book/bookdown-demo-master/bookdown-demo-master/docs/week1.html#data-variables-and-observations) will be helpful to have a better understanding of the notion of a data set, levels of measurement, and tidy data.
 
 R is considerably more flexible than Excel. Most of the work we do here will use data sets or **dataframes** as they are called in R. But as you have seen earlier you can have *objects* other than data frames in R. These objects can relate to external files or simple textual information ("I hate computers"). This flexibility is a big asset because among other things it allow us to break down data frames or the results from doing analysis on them to its constitutive parts (this will become clearer as we go along).
 
@@ -313,7 +314,7 @@ When you get an error message or implausible results, you want to look back at y
 
 A handy tip is to cut and paste the error message into Google and find a solution. If anybody had given me a penny for every time I had to do that myself, I would be Bill Gates by now. You’re probably not the first person to make your mistake, after all, and someone on the internet has surely already found a solution to your issue. People make mistakes all the time. It's how we learn. Don't get frustrated, don't get stuck. Instead look for a solution. These days we have Google. We didn't back in the day. Now you have the answer to your frustration within quick reach. Use it to your advantage.
 
-##Vectors
+## Vectors
 
 In R there are different kind of objects. We will start with **vectors**. 
 
@@ -728,5 +729,4 @@ Keep in mind though that you should not then panic if you open your next R Studi
 
 What is more. I would suggest you go to the Tools drop down menu, select Global Options, and make sure you select "Never" where it says "Save workspace". Then click "Apply". This way you will never be asked to save what is in your global environment when you terminate a session.
 
-![](imgs/neversave.PNG) 
-
+![](imgs/neversave.PNG)
