@@ -1,20 +1,20 @@
 # Homework Activities
 
-#### General instructions
+#### General instructions ####
 
 For all activities you are expected to produce html files with the discussed answers and the relevant code. You need to generate a markdown document and use `knitr` to generate the html file with your answer. Create one html file for each weekly submission. [This video](https://www.youtube.com/watch?v=-apyD5f9nwg) explains how to do this. The video uses an earlier version of `R markdown`, so you will notice that when you create a new markdown file instead a dialogue box open (select html) but everything else pretty much remains the same. In any case, you can find further details about `R markdown` [here](http://rmarkdown.rstudio.com/) or in this [very detailed tutorial](http://galahad.well.ox.ac.uk/repro/?utm_content=bufferc4efb&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer). [This guide](http://stat545-ubc.github.io/block007_first-use-rmarkdown.html#troubleshooting), produced for a different course unit, helps you to test drive and troubleshoot common problems. Although it may take you a while to get used to produce your homework in this way, in the long run you will see the benefits.
 
-You have to include all codes you use for the home works. Once you knit the file, you need to upload the html file to Turnit In through Blackboard.
+You have to include all codes you use for the home works. Once you knit to a html file, you need to upload the file to Turnit In through Blackboard.
 
 ## Week 1 Homework: Basic Data Exploration and Filtering
 
-### Exercise 1
-Create a data frame with the points achieved by all the Premiership teams in the 2021-2022 season. You can find the relevant information [here](https://en.wikipedia.org/wiki/2021%E2%80%9322_Premier_League).
+#### Exercise 1 ####
+Create a data frame with the number of police officer in each police force of the United Kingdom in 2016. You can find the relevant information [here](https://en.wikipedia.org/wiki/List_of_police_forces_of_the_United_Kingdom).
 
 1) What was the mean value of points for all the teams? 
-2) Using the filtering methods described compute the mean and standard deviation for the four top teams and compare it with the mean and the standard deviation of the remainder teams.
+2) Using the filtering methods described compute the mean and standard deviation for the four largest forces and compare it with the mean and the standard deviation of the remainder police forces.
 
-### Exercise 2
+#### Exercise 2 ####
 Load the classic [`Guerry`](https://en.wikipedia.org/wiki/Andr%C3%A9-Michel_Guerry) data available from the `Guerry` package.
 
 1) How many variables and cases does this dataset have? Hint: `dim()`
@@ -23,7 +23,7 @@ Load the classic [`Guerry`](https://en.wikipedia.org/wiki/Andr%C3%A9-Michel_Guer
 4) Produce a simple histogram of the `Crime_pers` variable. Any discernible patterns? Interpret and discuss your results.
 5) Produce summary statistics of the `Crime_pers` variable by `Region`. Any discernible patterns? Interpret and discuss your results.
 
-### Exercise 3
+#### Exercise 3 ####
 Acquire the “NCVS” data from blackboard under the data for week 1. Download this into your working directory, into a data subfolder if you have one. Import the data into R. Name the data frame object ‘ncvs’.
 
 1) Now explore your data with some of the functions we learned in the lab today. How many observations are in the dataframe? How many variables?
