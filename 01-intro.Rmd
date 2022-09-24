@@ -1,4 +1,4 @@
-# Week 0: A first lesson about R
+# A first lesson about R (week 0)
 
 ## Install R & RStudio
 
@@ -49,6 +49,7 @@ Click in the *Tools* menu and select *Global options*. This will open up a pop u
 Whenever you do analysis you will be working with a variety of files. You may have an Excel data set (or some other type of data set file, like csv for example), a Microsoft Word file where you are writing down the essay with your results, but also a script with all the programming code you have been using. R needs to know where all these files sit in your computer. Often you will get error messages because you are expecting R to find one of these files in the wrong location. **It is absolutely critical thus that you understand how your computer organises and store files.** Please watch the video below to understand the basics of file management and file paths: 
 
 [Windows users](https://www.top-windows-tutorials.com/file-paths/)
+
 [MAC users](https://www.switchingtomac.com/tutorials/osx/5-ways-to-reveal-the-path-of-a-file-on-macos/)
 
 The best way to avoid problems with file management in R is using what RStudio calls **R Projects**.

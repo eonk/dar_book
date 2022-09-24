@@ -1,5 +1,4 @@
-# Week 4: Hypotheses
-
+# Hypotheses (Week 4)
 
 ## The logic of hypothesis testing
 

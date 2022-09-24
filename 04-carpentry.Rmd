@@ -1,4 +1,4 @@
-# Prep for Week 3: Refresher on descriptive statistics & data carpentry
+# Refresher on descriptive statistics & data carpentry (Prep for Week 3)
 
 ## Introduction
 

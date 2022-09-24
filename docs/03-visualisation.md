@@ -1,4 +1,4 @@
-# Week 2: Data visualisation with R
+# Data visualisation with R (week 2)
 
 ## Introduction
 

@@ -2,9 +2,13 @@
 
 ## General instructions
 
-For all activities you are expected to produce html files with the discussed answers and the relevant code. You need to generate a markdown document and use `knitr` to generate the html file with your answer. Create one html file for each weekly submission. [This video](https://www.youtube.com/watch?v=-apyD5f9nwg) explains how to do this. The video uses an earlier version of `R markdown`, so you will notice that when you create a new markdown file instead a dialogue box open (select html) but everything else pretty much remains the same. In any case, you can find further details about `R markdown` [here](http://rmarkdown.rstudio.com/) or in this [very detailed tutorial](http://galahad.well.ox.ac.uk/repro/?utm_content=bufferc4efb&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer). [This guide](http://stat545-ubc.github.io/block007_first-use-rmarkdown.html#troubleshooting), produced for a different course unit, helps you to test drive and troubleshoot common problems. Although it may take you a while to get used to produce your homework in this way, in the long run you will see the benefits.
+In the first week session, we talked about why we need to conduct research in reproducible manner. It facilitates transparency in research process, increases public re-usability of scientific evidence, and promotes scientific collaboration.`Rmarkdown` documents are reproducible and supports various output formats such as pdf, html, and docx. `Rmarkdown` is simply combine your R codes, documents your data analysis into a reproducible document and format.
 
-You have to include all codes you use for the home works. Once you knit to a html file, you need to upload the file to Turnit In through Blackboard.
+![](imgs/rmarkdown.png)
+
+For all activities you are expected to produce html files with the discussed answers and the relevant code. You need to generate a Rmarkdown document and use `knitr` to generate the **html** file with your answer. Create one html file for each weekly submission. [This video](https://www.youtube.com/watch?v=-apyD5f9nwg) explains how to do this. The video uses an earlier version of `Rmarkdown`, so you will notice that when you create a new markdown file instead a dialogue box open (select html) but everything else pretty much remains the same. In any case, you can find further details about `Rmarkdown` [here](http://rmarkdown.rstudio.com/) or in this [very detailed tutorial](http://galahad.well.ox.ac.uk/repro/?utm_content=bufferc4efb&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer). [This guide](http://stat545-ubc.github.io/block007_first-use-rmarkdown.html#troubleshooting), produced for a different course unit, helps you to test drive and troubleshoot common problems. Although it may take you a while to get used to produce your homework in this way, in the long run you will see the benefits.
+
+You have to include all codes you use for the home works. Once you knit to a html file, you need to upload the file to TurnitIn through Blackboard before the next session (e.g., week 1 homework deadline is 'before Week 2 lab session')
 
 ## Week 1 Homework: Basic Data Exploration and Filtering
 
@@ -36,16 +40,22 @@ Download from the GitHub repository the following dataset `crossnat.csv`. You ur
 
 Look at the instructions for how to download files from the web that we provided in Week 1. This comma-separated value file contains a number of variables about 194 countries. This data is collected for teaching purposes in January 2014. The information comes from a variety of sources (World Bank, United Nations, OCDE, etc) and it relates to the more recent year for which data was available then.
 
-Sometimes students experience problems when downloading files within a Rmarkdown file. If you are getting stuck you may try an alternative. First get the file in your hard-drive using the console or a script (not Rmarkdown):  
-step 1. Download the file into your global environment as covered in week 1;
-step 2. Save the file into your hard-drive, for example write.csv(crossnat, "crossnat.csv") to save it as .csv in your working directory; 
+Sometimes students experience problems when downloading files within a Rmarkdown file. If you are getting stuck you may try an alternative. First get the file in your hard-drive using the console or a script (not Rmarkdown):
+
+**step 1** Download the file into your global environment as covered in week 1;
+
+**step 2** Save the file into your hard-drive, for example write.csv(crossnat, "crossnat.csv") to save it as .csv in your working directory; 
 Then and only then read the data from your working directory into rmarkdown (e.g., using the read.csv function).
 
 Ok, these are the questions:
-1) Display a histogram for the prison rate per 100,000 population (`prisonrate`). Interpret and discuss your results. Can you identify any outliers? Are these errors? Are there plausible explanations for the extreme values in these countries? 
-2) Produce density estimates and boxplots to compare the prison rate according to various categories of the level of [human development](http://hdr.undp.org/en/content/human-development-index-hdi) per country. Interpret and discuss your results. 
+
+1) Display a histogram for the prison rate per 100,000 population (`prisonrate`). Interpret and discuss your results. Can you identify any outliers? Are these errors? Are there plausible explanations for the extreme values in these countries?.
+
+2) Produce density estimates and boxplots to compare the prison rate according to various categories of the level of [human development](http://hdr.undp.org/en/content/human-development-index-hdi) per country. Interpret and discuss your results.
+
 3) Produce a scatterplot with a smoothed line to examine the relationship between `prisonrate` and `gdppercapita`. Interpret and discuss your results.
-4) Produce a scatterplot matrix to examine the relationship between `prisonrate`, `gdppercapita`, `urbanpop` (proportion of the population that lives in urban areas) and `homicide`(homicide per 100,000). Interpret and discuss your results. 
+
+4) Produce a scatterplot matrix to examine the relationship between `prisonrate`, `gdppercapita`, `urbanpop` (proportion of the population that lives in urban areas) and `homicide`(homicide per 100,000). Interpret and discuss your results.
 
 ## Week 3 Homework: Foundations for inference (confidence intervals)
 

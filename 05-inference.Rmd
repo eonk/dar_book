@@ -1,4 +1,4 @@
-# Week 3: Foundations of statistical inference: confidence intervals
+# Foundations of statistical inference: confidence intervals (Week 3)
 
 ## Introduction
 
