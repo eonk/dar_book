@@ -22,17 +22,21 @@ Load the classic [`Guerry`](https://en.wikipedia.org/wiki/Andr%C3%A9-Michel_Guer
 5) Produce summary statistics of the `Crime_pers` variable by `Region`. Any discernible patterns? Interpret and discuss your results. Hint: see the lab note 2.7. 
 
 **Exercise 2**
-Create a data frame with the number of police officer in each police force of the United Kingdom in 2016. You can find the relevant information [here](https://en.wikipedia.org/wiki/List_of_police_forces_of_the_United_Kingdom).
+Acquire the “NCVS” data from blackboard under the data for week 1. Download this into your working directory, into a data sub-folder if you have one. Import the data into R (Use 'Import Dataset' in the environment window. Select 'From SPSS'.). Name the dataframe object ‘ncvs’.
 
-1) What was the mean number of police officers in all police forces? 
-2) Using the 'filtering' methods described compute the mean and standard deviation for the four largest forces and compare it with the mean and the standard deviation of the remainder police forces. Hint: see lab note 2.5.
-
-**Exercise 3**
-Acquire the “NCVS” data from blackboard under the data for week 1. Download this into your working directory, into a data sub-folder if you have one. Import the data into R. Name the data frame object ‘ncvs’.
+![](imgs/hwimport.png)
 
 1) Now explore your data with some of the functions we learned in the lab today. How many observations are in the dataframe? How many variables?
 2) What are the possible values for the injured variable in the ncvs dataframe? What do these tell you? Hint: look for how to find labels. 
 3) I made a frequency table for the injured variable using the code `table(ncvs$injured)`. I received the output names as `0` and `1`. How can I make them as `uninjured` and `injured`?
+
+**Exercise 3**
+Acquire the “ukpolice” data from blackboard under the data for week 1. The data has information of 'the number of police officer in each police force (UK)' in 2016. You can find the relevant information [here](https://en.wikipedia.org/wiki/List_of_police_forces_of_the_United_Kingdom). (Use 'Import Dataset' in the environment window. Select 'From Stata'. You will learn how to import data in the later weeks using R codes. Here, just try to remember R can import different types of data in various ways).
+![](imgs/hwimport2.png)
+
+1) What was the mean number of police officers in all police forces? 
+2) Using the 'filtering' methods described compute the mean and standard deviation for the four largest forces and compare it with the mean and the standard deviation of the remainder police forces. Hint: see lab note 2.5.
+
 
 ## Week 2 Homework: Data visualisations with R
 
