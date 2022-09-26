@@ -106,12 +106,12 @@ Sometimes in these documents you will see on them the results of running the cod
 
 The R languages uses **functions** to tell the computer what to do. In the R *language* functions are the *verbs*. You can think of functions as predefined commands that somebody has already programmed into R and tell R what to do. Here you learnt your first R function: *print*. All this function does is to ask R to print whatever it is you want in the main console (see the window in the bottom left corner). 
 
-In R, you can pass a number of **arguments** to any function. These arguments control what the function will do in each case. The arguments appear between brackets. Here we passed the text "I hate computers" as an argument. Once you execute the program, by clicking on *Run*, the R engine sends this to the CPU of your machine in the form of binary code and this produces a result. In this case we see that result printed in the main console.
+In R, you can pass a number of **arguments** to any function. These arguments control what the function will do in each case. The arguments appear between brackets. Here we passed the text "I love stats" as an argument. Once you execute the program, by clicking on *Run*, the R engine sends this to the CPU of your machine in the form of binary code and this produces a result. In this case we see that result printed in the main console.
 
 Every R function admits different kind of arguments. Learning R involves not only learning different functions but also learning what are the valid arguments you can pass to each function. 
 
 ![](imgs/consoleresults.png)
-As indicated above, the window in the bottom left corner is the main **console**.You will see that the words "I hate computers" appear printed there.  If rather than using R Studio you were working directly from R, that's all you would get: the main console where you can write code interactively (rather than all the different windows you see in R Studio). You can write your code directly in the main console and execute it line by line in an interactive fashion. However, we will be running code from scripts, so that you get used to the idea of properly documenting all the steps you take,
+As indicated above, the window in the bottom left corner is the main **console**.You will see that the words "I love stats" appear printed there.  If rather than using R Studio you were working directly from R, that's all you would get: the main console where you can write code interactively (rather than all the different windows you see in R Studio). You can write your code directly in the main console and execute it line by line in an interactive fashion. However, we will be running code from scripts, so that you get used to the idea of properly documenting all the steps you take,
 
 ## More on packages
 
@@ -189,7 +189,7 @@ Remember, you only have to install a package that is not already installed once.
 
 We have seen how the first argument that the "say" function takes is the text that we want to convert into speech for our given animal. We could write the text directly into the function (as we did above), but now we are going to do something different. We are going to create an object to store the text.
 
-An **object**? What do I mean? In the same way that everything you do in R you do with functions (your verbs), everything that exist in R is an object. You can think of objects as boxes where you put stuff. In this case we are going to create an object called *my_text* and inside this object we are going to store the text "I hate computers". How do you do this? We will use the code below:
+An **object**? What do I mean? In the same way that everything you do in R you do with functions (your verbs), everything that exist in R is an object. You can think of objects as boxes where you put stuff. In this case we are going to create an object called *my_text* and inside this object we are going to store the text "I love stats". How do you do this? We will use the code below:
 
 ```{r}
 
@@ -197,7 +197,7 @@ my_text <- "I love stats."
 
 ```
 
-This bit of code is simply telling R we are creating a new object with the assigned name ("my_text"). We are creating a box with such name and inside this box we are placing a bit of text ("I love stats"). The arrow you see is the **assignment operator**. This is an important part of the R language that tells R what we are including inside the object in question. 
+This bit of code is simply telling R we are creating a new object with the assigned name ("my_text"). We are creating a box with such name and inside this box we are placing a bit of text ("I love stats"). The arrow `<-` you see is the **assignment operator**. This is an important part of the R language that tells R what we are including inside the object in question.
 
 Run the code. Look now at the *Environment* window in the right top corner. We see that this object is now listed there. You can think of the Environment as a warehouse where you put stuff in, your different objects. Is there a limit to this environment? Yes, your RAM. R works on your RAM, so you need to be aware that if you use very large objects you will need loads of RAM. But that won't be a problem you will encounter in this course unit.
 
@@ -210,9 +210,9 @@ say(my_text, "cow")
 ## More on objects 
 
 Now that we have covered some of the preliminaries we can move to talk about data. In Excel you are used to see your data in a spreadsheet format. If you need some recap
-, you should review some of the materials *Making Sense of Criminological Data* that is designed for UG students. This [chapter](https://rawgit.com/maczokni/MSCD/master/book/bookdown-demo-master/bookdown-demo-master/docs/week1.html#data-variables-and-observations) will be helpful to have a better understanding of the notion of a data set, levels of measurement, and tidy data.
+, you should review some of the materials that is designed for UG students in Criminology. This [chapter](https://maczokni.github.io/MSCD_labs/week1.html#data-variables-and-observations) will be helpful to have a better understanding of the notion of a data set, levels of measurement, and tidy data.
 
-R is considerably more flexible than Excel. Most of the work we do here will use data sets or **dataframes** as they are called in R. But as you have seen earlier you can have *objects* other than data frames in R. These objects can relate to external files or simple textual information ("I hate computers"). This flexibility is a big asset because among other things it allow us to break down data frames or the results from doing analysis on them to its constitutive parts (this will become clearer as we go along).
+R is considerably more flexible than Excel. Most of the work we do here will use data sets or **dataframes** as they are called in R. But as you have seen earlier you can have *objects* other than data frames in R. These objects can relate to external files or simple textual information ("I love stats"). This flexibility is a big asset because among other things it allow us to break down data frames or the results from doing analysis on them to its constitutive parts (this will become clearer as we go along).
 
 Technically R is an *Object Oriented language*. Object-oriented programming (OOP) is a programming language model organized around objects rather than "actions" and data rather than logic.
 
@@ -252,15 +252,15 @@ In R there are different kind of objects. We will start with **vectors**.
 
 What is a vector? A vector is simply a set of elements *of the same class* (typically these classes are: character, numeric, integer, or logical -as in True/False). Vectors are the basic data structure in R. 
 
-Typically you will use the `c()` function (c stands for concatenate) to create vectors. The code below exemplifies how to create vectors of different classes (numeric, logical, etc.). Notice how the listed elements (to simplify there are two elements in each vector below) are separated by commas:
+Typically you will use the `c()` function (c stands for *concatenate*) to create vectors. The code below exemplifies how to create vectors of different classes (numeric, logical, character, etc.). Notice how the listed elements (to simplify there are two elements in each vector below) are separated by commas `,`:
 
 ```{r}
 my_1st_vector <- c(0.5, 0.6) #creates a numeric vector with two elements
-my_2nd_vector <- c(1L, 2L) #creates an integer vector
+my_2nd_vector <- c(1L, 2L) #creates an integer vector ("L" suffix specifies an integer type)
 my_3rd_vector <- c(TRUE, FALSE) #creates a logical vector
 my_4th_vector <- c(T, F) #creates a logical vector using abbreviations of True and False, but you should avoid this formulation an instead use the full word.
 my_5th_vector <- c("a", "b", "c") #creates a character vector
-my_6th_vector <- c(1+0i, 2+4i) #creates a complex vector (we won't really use this class)
+my_6th_vector <- c(1+0i, 2+4i) #creates a complex vector (we won't really use in this class)
 ```
 
 Cut and paste this code into your script and run it. You will see how all these vectors are added to your global environment and stored there.
@@ -300,21 +300,6 @@ my_8th_vector <- c(0.5, "a")
 class(my_8th_vector) #The class() function will tell us the class of the vector
 ```
 
-## On comments
-
-In the bits of code above you will have noticed parts that were grayed out. See for example in the last example provided. You can see that after the hashtag all the text is being grayed out. What is this? What's going on? 
-
-These are **comments**. Comments are simply annotations that R will know is not code (and therefore doesn't attempt to understand and execute). We use the hash-tag symbol to specify to R that what comes after is not programming code, but simply bits of notes that we write to remind ourselves what the code is actually doing. Including these comments will help you to understand your code when you come back to it.
-
-To create a comment you use the hashtag/ number sign `#` followed by some text. Whenever the R engine sees the number sign it knows that what follows is not code to be executed. You can use this sign to include *annotations* when you are coding. These annotations are a helpful reminder to yourself (and others reading your code) of **what** the code is doing and (even more important) **why** you are doing it. 
-
-It is good practice to often use annotations. You can use these annotations in your code to explain your reasoning and to create "scannable" headings in your code. That way after you save your script you will be able to share it with others or return to it at a later point and understand what you were doing when you first created it -see [here for further details on annotations and in how to save a script when working with the basic R interface](http://www.screenr.com/1VN8).
-
-Just keep in mind: 
-+ You need one `#` per line, and anything after that is a comment that is not executed by R.
-
-+ You can use spaces after (its not like a hashtag on twitter). 
-
 ## Factors
 
 An important thing to understand in R is that categorical (ordered, also called ordinal, or unordered, also called nominal) data are *typically* encoded as **factors**, which are just a special type of vector.  A factor is simply an integer vector that can contain *only predefined values* (this bit is very important), and is used to store categorical data. Factors are treated specially by many data analytic and visualisation functions. This makes sense because they are essentially different from quantitative variables.
@@ -327,20 +312,35 @@ Factors can also be created with the `factor()` function concatenating a series 
 the_smiths <- factor(c("Morrisey", "Marr", "Rourke", "Joyce")) #create a new factor
 the_smiths #auto-print the factor
 #Alternatively for similar result using the as.factor() function
-the_smiths_bis <- c("Morrisey", "Marr", "Rourke", "Joyce") #create a character vector
-the_smiths_f <- as.factor(the_smiths_bis) #create a factor using a character vector
+the_smiths_char <- c("Morrisey", "Marr", "Rourke", "Joyce") #create a character vector
+the_smiths_f <- as.factor(the_smiths_char) #create a factor using a character vector
 the_smiths_f #auto-print factor
 ```
 
-Factors in R can be seen as vectors with a bit more information added. This extra information consists of a record of the distinct values in that vector, called **levels**. If you want to know the levels in a given factor you can use the `levels()` function:
+Factors in R can be seen as vectors with more information added. This extra information consists of a record of the distinct values in that vector, called **levels**. If you want to know the levels in a given factor you can use the `levels()` function:
 
 ```{r}
-levels(the_smiths)
+levels(the_smiths_f)
 ```
 
-Notice that the levels appear printed by alphabetical order. There will be situations when this is not the most convenient order. Later on we will discuss in these tutorials how to reorder your factor levels when you need to.
+Notice that the levels appear printed by alphabetical order (Try `levels(the_smiths_char)` and see what R says. Yes, `the_smiths_char` and `the_smiths_f` are different!). There will be situations when this is not the most convenient order (e.g., *Dec, Jan, Mar (Alphabetical order)* instead of *Jan, Mar, Dec*). Later on we will discuss in these tutorials how to reorder your factor levels when you need to.
 
-## Naming conventions for objects in R
+## Tips: How to use 'comment'
+
+In the bits of code above, you will have noticed parts that were grayed out. See for example in the last example provided. You can see that after the hashtag, all the text is being grayed out. What is this? What's going on? 
+
+These are **comments**. Comments are simply annotations that R will know is not code (and therefore doesn't attempt to understand and execute). We use the hash-tag symbol to specify to R that what comes after is not programming code, but simply bits of notes that we write to remind ourselves what the code is actually doing. Including these comments will help you to understand your code when you come back to it.
+
+To create a comment you use the hashtag/ number sign `#` followed by some text. Whenever the R engine sees the number sign it knows that what follows is not code to be executed. You can use this sign to include *annotations* when you are coding. These annotations are a helpful reminder to yourself (and others reading your code) of **what** the code is doing and (even more important) **why** you are doing it. 
+
+It is good practice to often use annotations. You can use these annotations in your code to explain your reasoning and to create "scannable" headings in your code. That way after you save your script you will be able to share it with others or return to it at a later point and understand what you were doing when you first created it -see [here for further details on annotations and in how to save a script when working with the basic R interface](http://www.screenr.com/1VN8).
+
+Just keep in mind: 
++ You need one `#` per line, and anything after that is a comment that is not executed by R.
+
++ You can use spaces after (its not like a hashtag on twitter). 
+
+## Tips: Naming conventions for objects in R
 
 You may have noticed the various names I have used to designate objects (`my_1st_vector`, `the_smiths`, etc.). You can use almost any names you want for your objects. Objects in R can have names of any length consisting of letters, numbers, underscores ("_") or the period (".") and should begin with a letter. In addition, when naming objects you need to remember: 
 
@@ -364,16 +364,16 @@ If you want, give it a try. Try to create a variable called 12 and assign it the
 
 You get an error!
 
-## Dataframes
+## Data frame
 
 Ok, so now that you understand some of the basic types of objects you can use in R, let's start taking about data frames. One of the most common objects you will work with in this course are **data frames**. Data frames can be created with the `data.frame()` function. 
 
-Data frames are *multiple vectors* of possibly different classes (e.g., numeric, factors), but of the same length (e.g., all vectors, or variables, have the same number of rows). This may sound a bit too technical but it is simply a way of saying that a data frame is what in other programmes for data analysis gets represented as data sets, the tabular spreadsheets you have seen when using Excel.
+Data frames are *multiple vectors* of possibly different classes (e.g., numeric, factors, character), but of the same length (e.g., all vectors, or variables, have the same number of rows). This may sound a bit too technical but it is simply a way of saying that a data frame is what in other programmes for data analysis gets represented as data sets, the tabular spreadsheets you have seen when using Excel.
 
 Let's create a data frame with two variables:
 
 ```{r}
-#We create a dataframe called mydata.1 with two variables, an integer vector called foo and a logical vector called bar
+#We create a dataframe called mydata_1 with two variables, an integer vector called foo and a logical vector called bar
 mydata_1 <- data.frame(foo = 1:4, bar = c(T,T,F,F))
 mydata_1
 ```
@@ -393,10 +393,10 @@ These are silly toy examples of data frames. In this course, we will use real da
 
 Let's have a look at some of them. We are going to look at some data that are part of the *fivethirtyeight* package. This package contains data sets and code behind the stories in [this particular online newspaper](http://fivethirtyeight.com/). This package is not part of the base installation of R, so you will need to install it first. I won't give you the code for it. See if you can figure it out by looking at previous examples.
 
-Done? Ok, now we are going to look at the data sets that are included in this package. Remember first we have to load the package if we want to use it:
+Done? Ok, now we are going to look at the data sets that are included in this package. Remember first we have to install and load the package if we want to use it:
 
 ```{r}
-library("fivethirtyeight")
+library(fivethirtyeight)
 data(package="fivethirtyeight") #This function will return all the data frames that are available in the named package.
 ```
 

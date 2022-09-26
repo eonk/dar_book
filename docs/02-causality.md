@@ -45,7 +45,7 @@ This  data file is a STATA .dta file in our working directory. To read STATA fil
 
 ```r
 library(haven)
-#Now we can use the read_dta function, within this function we will
+#Now we can use the 'read_dta' function, within this function we will
 #pass an argument, url, specifying to the read_dta function the need to
 #make a url connection. The url function takes as an argument the url
 #we are using and that we encoded in the data_url object in our case.
@@ -66,8 +66,7 @@ What is the first thing you need to ask yourself when you look at a dataset? Dat
 
 As Mara Averick (somebody you want to follow in twitter at @dataanndme if you want to be in top of R related resources) suggests this also makes for good relationship advice!
 
-
-![](imgs/relationships.png)<!-- -->
+![](imgs/relationships.png)
 
 Here we are going to introduce a few functions that will help you to start making sense for what you have just downloaded. Summarising the data is the first step in any analysis and it is also used for finding out potential problems with the data. Regarding the latter you want to look out for: missing values; values outside the expected range (e.g., someone aged 200 years); values that seem to be in the wrong units; mislabeled variables; or variables that seem to be the wrong class (e.g., a quantitative variable encoded as a factor). 
 
@@ -256,10 +255,9 @@ So far we have a looked at single columns in your dataframe one at the time. But
 
 For example, we can use the `lapply()` function to look at each column and get its class. To do so, we have to pass two arguments to the `lapply()` function, the first is the name of the dataframe, to tell it what to look through, and the second is the function we want it to apply to every column of that function. 
 
-So we want to type "lapply(" + "name of dataframe" + "," + "name of function " + ")" 
+So we want to type `lapply` + `(`+ `name of dataframe` + `,` + `name of function` + `)` 
 
 Which is: 
-
 
 ```r
 lapply(banbox, class)
@@ -410,7 +408,6 @@ There is a whole field of statistics devoted to doing analysis when missing data
 The data analysis workflow has a number of stages. The diagram below (produced by Hadley Wickham) is a nice illustration of this process:
 
 ![](imgs/data-science-explore.png)
-
 We have started to see different ways of bringing data into R. And we have also started to see how we can explore our data. It is now time we start discussing one of the following stages, **transform**. A good deal of time and effort in data analysis is devoted to this. You get your data and then you have to do some transformations to it so that you can answer the questions you want to address in your research. We have already seen, for example, how to turn variables into factors, but there are other things you may want to do.
 
 R offers a great deal of flexibility in how to transform your data, Here we are going to illustrate some of the functionality of the *dplyr* package for data carpentry (a term people use to refer to this kind of operations). This package is part of the tydiverse and it aims to provide a friendly and modern take on how to work with dataframes (or tibbles) in R. It offers, as the authors of the package put it, "a flexible grammar of data manipulation". 
@@ -474,7 +471,7 @@ One of the first operations you may want to carry out when working with datafram
 
 For this kind of operations we use the `filter()` function. Like all single verbs in dplyr, the first argument is the tibble (or data frame). The second and subsequent arguments refer to variables within that data frame, selecting rows where the expression is TRUE. 
 
-Ok, so if we look at the dataset we can see that there is a variable called "crimbox" that identifies applications that require information about criminal antecedents and there is a variable called "pre" that identifies whether the application was sent before the legislation was introduced. In this dataset the value 1 is being used to denote positive responses. So, if we want to create the 2017 dataset we would start by selecting only data where the value in these two variables equals 1 as shown below.
+Ok, let's filter out some information we are interested in from `bandbox`. If we look at the dataset we can see that there is a variable called "crimbox" that identifies 'applications that require information about criminal antecedents' and there is a variable called "pre" that identifies 'whether the application was sent before the legislation was introduced'. In this dataset, the value 1 is being used to denote positive responses. Therefore, if we want to create the 2017 dataset, we would start by selecting only data where the value in these two variables equals 1 as shown below.
 
 
 ```r
@@ -487,7 +484,7 @@ aer2017<- filter(banbox, crimbox == 1, pre == 1)
 
 Notice that the number of cases equals the number of cases reported by the authors in their 2017 paper. That's cool! So far we are replicating with same results.
 
-You may have noticed in the code above that I wrote "=="" instead of "=". Logical operators in R are not written exactly the same way than in normal practice. Keep this in mind when you get error messages from running your code. Often the source of your error may be that you are writing the logical operators the wrong way (as far as R is concerned). Look [here](https://www.statmethods.net/management/operators.html) for valid logic operators in R.
+You may have noticed in the code above that I wrote "`==`" instead of "`=`". Logical operators in R are not written exactly the same way than in normal practice. Keep this in mind when you get error messages from running your code. Often the source of your error may be that you are writing the logical operators the wrong way (as far as R is concerned). Look [here](https://www.statmethods.net/management/operators.html) for valid logic operators in R.
 
 Sometimes you may want to select only a few variables. Earlier we said that real life data may have hundreds of variables and only a few of those may be relevant for your analysis. Say you only want "crime", "ged" (a ged is a high school equivalence diploma rather than a proper high school diploma and is sometimes seen as inferior), "empgap" (a gap year on employment), "black_f", "response", and "daystoresponse" from this dataset. For this kind of operations you use the `select()` function.
 
@@ -504,7 +501,7 @@ If you now look at the global environment you will see that the "aer2017" tibble
 
 So far we have used `dplyr` single verbs for ungrouped operations. But we can also use some of the functionality of `dplyr` for obtaining answers to questions that relate to groups of cases within our dataframe. Imagine that you want to know if applicants with a criminal record are less likely to receive a positive response from employers. How could you figure that one out? For answering this kind of questions we can use the `group_by()` function in conjunction with other `dplyr` functions. In particular we are going to look at the `summarise` function.
 
-First we group the observations by criminal record in a new object, by using as_factor in the call to the crime variable the results will be labelled later on (even though we are not changing the crime variable in the aer2017 dataframe. Keep in mind we are using as_factor because the column crime is a labelled vector rather than a factor or a character vector, and we do this to aid interpretation (it is easier to
+First we group the observations by criminal record in a new object, "by_antecedents", by using `as_factor()` in the call to the crime variable the results will be labelled later on (even though we are not changing the crime variable in the aer2017 dataframe). Keep in mind we are using `as_factor()` because the column crime is a labelled vector rather than a factor or a character vector, and we do this to aid interpretation (it is easier to
 interpret labels than 0 and 1).
 
 
@@ -517,8 +514,8 @@ by_antecedents <- group_by(aer2017, as_factor(crime))
 results <- summarise(by_antecedents,
   count = n(),
   outcome = mean(response, na.rm = TRUE))
-#autoprint the results stored in the newly created object
-results
+
+results #auto-print the results stored in the newly created object
 ```
 
 ```
@@ -529,7 +526,7 @@ results
 ## 2 Crime               1336  0.0846
 ```
 
-Let's look at the code in the summarise function above. First we are asking R to place the results in an object we are calling "results". Then we are specifying that we want to group the data in the way we specified in our `group_by()` function before, that is by criminal record. Then we pass two arguments. Each of these arguments is creating a new variable in the resulting object called "results". The first variable we are creating is called "*count*" by saying this equals "n()" we are specifying to R that this new variable simply counts the number of cases in each of the grouping categories. The second variable we are creating is called "*outcome*" and to compute this variable we are asking R to compute the mean of the variable response for each of the two groups of applicants defined in "by_antecedents" (those with records, those without). Remember that the variable response in the "aer2017" dataframe was coded as numeric variable, even though in truth is categorical in nature (there was a response, or not, from the employers). It doesn't really matter. Taking the mean of a binary variable in this case is mathematically equivalent to computing a proportion as we discussed earlier.
+Let's look at the code in the `summarise` function above. First we are asking R to place the results in an object we are calling "results". Then we are specifying that we want to group the data in the way we specified in our `group_by()` function before, that is by criminal record. Then we pass two arguments. Each of these arguments is creating a new variable in the resulting object called "results". The first variable we are creating is called "*count*" by saying this equals "n()" we are specifying to R that this new variable simply counts the number of cases in each of the grouping categories. The second variable we are creating is called "*outcome*" and to compute this variable we are asking R to compute the mean of the variable response for each of the two groups of applicants defined in "by_antecedents" (those with records, those without). Remember that the variable response in the "aer2017" dataframe was coded as numeric variable, even though in truth is categorical in nature (there was a response, or not, from the employers). It doesn't really matter. Taking the mean of a binary variable in this case is mathematically equivalent to computing a proportion as we discussed earlier.
 
 So, what we see here is that about 13.6% of applicants with no criminal record received a positive response from the employers, whereas only 8% of those with criminal records did receive such a response. Given that the assignation of a criminal record was randomised to the applicants, there's a pretty good chance that no other [**confounders**](https://en.wikipedia.org/wiki/Confounding) are influencing this outcome. And that is the beauty of randomised experiments. You may be in a position to make stronger claims about your results.
 
@@ -559,9 +556,9 @@ We could do as before and get results by groups. Let's look at the impact of rac
 
 ```r
 by_race <- group_by(banbox, black_f)
-results_3 <- summarise(by_race,
+results_2 <- summarise(by_race,
   avg_delay = mean(daystoresponse, na.rm = TRUE))
-results_3
+results_2
 ```
 
 ```
@@ -572,8 +569,7 @@ results_3
 ## 2 Black        20.4
 ```
 
-We can see that the average delay seems to be longer for Black applicants than White applicants. 
-
+We can see that the average delay seems to be longer for 'Black' applicants than 'White' applicants. 
 
 But we could also try to represent these differences graphically. The problem with comparing groups on quantitative variables using numerical summaries such as the mean, is that these comparisons hide more than they show. We want to see the full distribution, not just the mean. For this we are going to use `ggplot2` the main graphical package we will use this semester. We won't get into the details of this package or what the code below means, but just try to run it. We will cover graphics in R in the next section. This is just a taster for it.
 
@@ -584,9 +580,9 @@ ggplot(banbox, aes(y = daystoresponse, x = black_f)) +
   geom_boxplot() 
 ```
 
-<img src="02-causality_files/figure-html/unnamed-chunk-30-1.png" width="672" />
+<img src="02-causality_files/figure-html/unnamed-chunk-29-1.png" width="672" />
 
 Watch [this video](https://www.khanacademy.org/math/probability/data-distributions-a1/box--whisker-plots-a1/v/reading-box-and-whisker-plots) and see if you can interpret the results portrayed here. What do you think?
 
 
-Overall the outcomes are worse for Black applicants, and in fact, the authors find that employers substantially increase discrimination on the basis of race after ban the box goes into effect.You can now replicate these findings with the data provided. by applying the new skills you've learned this week!
+Overall the outcomes are worse for 'Black' applicants, and in fact, the authors find that employers substantially increase discrimination on the basis of race after ban the box goes into effect.You can now replicate these findings with the data provided. by applying the new skills you've learned this week!

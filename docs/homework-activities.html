@@ -23,7 +23,7 @@
 <meta name="author" content="Reka Solymosi and Eon Kim (based on material developed with Juanjo Medina)" />
 
 
-<meta name="date" content="2022-09-24" />
+<meta name="date" content="2022-09-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -148,10 +148,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.7" data-path="a-first-lesson-about-r-week-0.html"><a href="a-first-lesson-about-r-week-0.html#using-objects"><i class="fa fa-check"></i><b>1.7</b> Using objects</a></li>
 <li class="chapter" data-level="1.8" data-path="a-first-lesson-about-r-week-0.html"><a href="a-first-lesson-about-r-week-0.html#more-on-objects"><i class="fa fa-check"></i><b>1.8</b> More on objects</a></li>
 <li class="chapter" data-level="1.9" data-path="a-first-lesson-about-r-week-0.html"><a href="a-first-lesson-about-r-week-0.html#vectors"><i class="fa fa-check"></i><b>1.9</b> Vectors</a></li>
-<li class="chapter" data-level="1.10" data-path="a-first-lesson-about-r-week-0.html"><a href="a-first-lesson-about-r-week-0.html#on-comments"><i class="fa fa-check"></i><b>1.10</b> On comments</a></li>
-<li class="chapter" data-level="1.11" data-path="a-first-lesson-about-r-week-0.html"><a href="a-first-lesson-about-r-week-0.html#factors"><i class="fa fa-check"></i><b>1.11</b> Factors</a></li>
-<li class="chapter" data-level="1.12" data-path="a-first-lesson-about-r-week-0.html"><a href="a-first-lesson-about-r-week-0.html#naming-conventions-for-objects-in-r"><i class="fa fa-check"></i><b>1.12</b> Naming conventions for objects in R</a></li>
-<li class="chapter" data-level="1.13" data-path="a-first-lesson-about-r-week-0.html"><a href="a-first-lesson-about-r-week-0.html#dataframes"><i class="fa fa-check"></i><b>1.13</b> Dataframes</a></li>
+<li class="chapter" data-level="1.10" data-path="a-first-lesson-about-r-week-0.html"><a href="a-first-lesson-about-r-week-0.html#factors"><i class="fa fa-check"></i><b>1.10</b> Factors</a></li>
+<li class="chapter" data-level="1.11" data-path="a-first-lesson-about-r-week-0.html"><a href="a-first-lesson-about-r-week-0.html#tips-how-to-use-comment"><i class="fa fa-check"></i><b>1.11</b> Tips: How to use ‘comment’</a></li>
+<li class="chapter" data-level="1.12" data-path="a-first-lesson-about-r-week-0.html"><a href="a-first-lesson-about-r-week-0.html#tips-naming-conventions-for-objects-in-r"><i class="fa fa-check"></i><b>1.12</b> Tips: Naming conventions for objects in R</a></li>
+<li class="chapter" data-level="1.13" data-path="a-first-lesson-about-r-week-0.html"><a href="a-first-lesson-about-r-week-0.html#data-frame"><i class="fa fa-check"></i><b>1.13</b> Data frame</a></li>
 <li class="chapter" data-level="1.14" data-path="a-first-lesson-about-r-week-0.html"><a href="a-first-lesson-about-r-week-0.html#exploring-data"><i class="fa fa-check"></i><b>1.14</b> Exploring data</a></li>
 <li class="chapter" data-level="1.15" data-path="a-first-lesson-about-r-week-0.html"><a href="a-first-lesson-about-r-week-0.html#quitting-rstudio"><i class="fa fa-check"></i><b>1.15</b> Quitting RStudio</a></li>
 </ul></li>
@@ -275,22 +275,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="week-1-homework-basic-data-exploration-and-filtering" class="section level2 hasAnchor" number="7.2">
 <h2><span class="header-section-number">7.2</span> Week 1 Homework: Basic Data Exploration and Filtering<a href="homework-activities.html#week-1-homework-basic-data-exploration-and-filtering" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><strong>Exercise 1</strong>
-Create a data frame with the number of police officer in each police force of the United Kingdom in 2016. You can find the relevant information <a href="https://en.wikipedia.org/wiki/List_of_police_forces_of_the_United_Kingdom">here</a>.</p>
+Load the classic <a href="https://en.wikipedia.org/wiki/Andr%C3%A9-Michel_Guerry"><code>Guerry</code></a> data available from the <code>Guerry</code> package. Hint: see the lab note 1.13 Dataframes. We got ‘hate_crimes’ data from the ‘fivethirtyeight’ package.</p>
 <ol style="list-style-type: decimal">
-<li>What was the mean value of points for all the teams?</li>
-<li>Using the filtering methods described compute the mean and standard deviation for the four largest forces and compare it with the mean and the standard deviation of the remainder police forces.</li>
-</ol>
-<p><strong>Exercise 2</strong>
-Load the classic <a href="https://en.wikipedia.org/wiki/Andr%C3%A9-Michel_Guerry"><code>Guerry</code></a> data available from the <code>Guerry</code> package.</p>
-<ol style="list-style-type: decimal">
-<li>How many variables and cases does this dataset have? Hint: <code>dim()</code></li>
+<li>How many variables and cases does this data have? Hint: <code>dim()</code></li>
 <li>What are the names of the variables? Hint: <code>names()</code></li>
 <li>What does the variable <code>Prostitutes</code> measures? Hint: <code>help()</code></li>
-<li>Produce a simple histogram of the <code>Crime_pers</code> variable. Any discernible patterns? Interpret and discuss your results.</li>
-<li>Produce summary statistics of the <code>Crime_pers</code> variable by <code>Region</code>. Any discernible patterns? Interpret and discuss your results.</li>
+<li>Produce a simple histogram of the <code>Crime_pers</code> variable. Any discernible patterns? Interpret and discuss your results. Hint: <code>Hist()</code></li>
+<li>Produce summary statistics of the <code>Crime_pers</code> variable by <code>Region</code>. Any discernible patterns? Interpret and discuss your results. Hint: see the lab note 2.7.</li>
+</ol>
+<p><strong>Exercise 2</strong>
+Create a data frame with the number of police officer in each police force of the United Kingdom in 2016. You can find the relevant information <a href="https://en.wikipedia.org/wiki/List_of_police_forces_of_the_United_Kingdom">here</a>.</p>
+<ol style="list-style-type: decimal">
+<li>What was the mean number of police officers in all police forces?</li>
+<li>Using the ‘filtering’ methods described compute the mean and standard deviation for the four largest forces and compare it with the mean and the standard deviation of the remainder police forces. Hint: see lab note 2.5.</li>
 </ol>
 <p><strong>Exercise 3</strong>
-Acquire the “NCVS” data from blackboard under the data for week 1. Download this into your working directory, into a data subfolder if you have one. Import the data into R. Name the data frame object ‘ncvs’.</p>
+Acquire the “NCVS” data from blackboard under the data for week 1. Download this into your working directory, into a data sub-folder if you have one. Import the data into R. Name the data frame object ‘ncvs’.</p>
 <ol style="list-style-type: decimal">
 <li>Now explore your data with some of the functions we learned in the lab today. How many observations are in the dataframe? How many variables?</li>
 <li>What are the possible values for the injured variable in the ncvs dataframe? What do these tell you? Hint: look for how to find labels.</li>

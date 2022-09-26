@@ -13,22 +13,22 @@ You have to include all codes you use for the home works. Once you knit to a htm
 ## Week 1 Homework: Basic Data Exploration and Filtering
 
 **Exercise 1**
-Create a data frame with the number of police officer in each police force of the United Kingdom in 2016. You can find the relevant information [here](https://en.wikipedia.org/wiki/List_of_police_forces_of_the_United_Kingdom).
+Load the classic [`Guerry`](https://en.wikipedia.org/wiki/Andr%C3%A9-Michel_Guerry) data available from the `Guerry` package. Hint: see the lab note 1.13 Dataframes. We got 'hate_crimes' data from the 'fivethirtyeight' package.
 
-1) What was the mean value of points for all the teams? 
-2) Using the filtering methods described compute the mean and standard deviation for the four largest forces and compare it with the mean and the standard deviation of the remainder police forces.
-
-**Exercise 2**
-Load the classic [`Guerry`](https://en.wikipedia.org/wiki/Andr%C3%A9-Michel_Guerry) data available from the `Guerry` package.
-
-1) How many variables and cases does this dataset have? Hint: `dim()`
+1) How many variables and cases does this data have? Hint: `dim()`
 2) What are the names of the variables? Hint: `names()`
 3) What does the variable `Prostitutes` measures? Hint: `help()`
-4) Produce a simple histogram of the `Crime_pers` variable. Any discernible patterns? Interpret and discuss your results.
-5) Produce summary statistics of the `Crime_pers` variable by `Region`. Any discernible patterns? Interpret and discuss your results.
+4) Produce a simple histogram of the `Crime_pers` variable. Any discernible patterns? Interpret and discuss your results. Hint: `Hist()`
+5) Produce summary statistics of the `Crime_pers` variable by `Region`. Any discernible patterns? Interpret and discuss your results. Hint: see the lab note 2.7. 
+
+**Exercise 2**
+Create a data frame with the number of police officer in each police force of the United Kingdom in 2016. You can find the relevant information [here](https://en.wikipedia.org/wiki/List_of_police_forces_of_the_United_Kingdom).
+
+1) What was the mean number of police officers in all police forces? 
+2) Using the 'filtering' methods described compute the mean and standard deviation for the four largest forces and compare it with the mean and the standard deviation of the remainder police forces. Hint: see lab note 2.5.
 
 **Exercise 3**
-Acquire the “NCVS” data from blackboard under the data for week 1. Download this into your working directory, into a data subfolder if you have one. Import the data into R. Name the data frame object ‘ncvs’.
+Acquire the “NCVS” data from blackboard under the data for week 1. Download this into your working directory, into a data sub-folder if you have one. Import the data into R. Name the data frame object ‘ncvs’.
 
 1) Now explore your data with some of the functions we learned in the lab today. How many observations are in the dataframe? How many variables?
 2) What are the possible values for the injured variable in the ncvs dataframe? What do these tell you? Hint: look for how to find labels. 

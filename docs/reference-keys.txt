@@ -8,10 +8,10 @@ more-on-packages
 using-objects
 more-on-objects
 vectors
-on-comments
 factors
-naming-conventions-for-objects-in-r
-dataframes
+tips-how-to-use-comment
+tips-naming-conventions-for-objects-in-r
+data-frame
 exploring-data
 quitting-rstudio
 getting-to-know-your-data-week-1
