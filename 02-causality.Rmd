@@ -37,7 +37,6 @@ You could just click "download" and then place the file in your project director
 ```{r bring data}
 #First, let's create an object with the link, paste the copied address here:
 data_url <- "https://dataverse.harvard.edu/api/access/datafile/3036350"
-
 ```
 
 This  data file is a STATA .dta file in our working directory. To read STATA files we will need the *haven* package. This is a package developed for importing different kind of data files into R. If you don't have it you will need to install it. And then load it.
