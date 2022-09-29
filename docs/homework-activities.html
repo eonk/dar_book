@@ -23,7 +23,7 @@
 <meta name="author" content="Reka Solymosi and Eon Kim (based on material developed with Juanjo Medina)" />
 
 
-<meta name="date" content="2022-09-29" />
+<meta name="date" content="2022-09-28" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -92,7 +92,7 @@ code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
 code span.at { color: #7d9029; } /* Attribute */
 code span.bn { color: #40a070; } /* BaseN */
-code span.bu { color: #008000; } /* BuiltIn */
+code span.bu { } /* BuiltIn */
 code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
 code span.ch { color: #4070a0; } /* Char */
 code span.cn { color: #880000; } /* Constant */
@@ -105,7 +105,7 @@ code span.er { color: #ff0000; font-weight: bold; } /* Error */
 code span.ex { } /* Extension */
 code span.fl { color: #40a070; } /* Float */
 code span.fu { color: #06287e; } /* Function */
-code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.im { } /* Import */
 code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 code span.kw { color: #007020; font-weight: bold; } /* Keyword */
 code span.op { color: #666666; } /* Operator */
@@ -289,14 +289,14 @@ Acquire the “NCVS” data from blackboard under the data for week 1. Download 
 <ol style="list-style-type: decimal">
 <li>Now explore your data with some of the functions we learned in the lab today. How many observations are in the dataframe? How many variables?</li>
 <li>What are the possible values for the injured variable in the ncvs dataframe? What do these tell you? Hint: look for how to find labels.</li>
-<li>I made a frequency table for the injured variable using the code <code>table(ncvs$injured)</code>. I received the output names as <code>0</code> and <code>1</code>. How can I make them as <code>uninjured</code> and <code>injured</code>? Hint:<code>as_factor()</code></li>
+<li>I made a frequency table for the injured variable using the code <code>table(ncvs$injured)</code>. I received the output names as <code>0</code> and <code>1</code>. How can I make them as <code>uninjured</code> and <code>injured</code>?</li>
 </ol>
 <p><strong>Exercise 3</strong>
 Acquire the “ukpolice” data from blackboard under the data for week 1. The data has information of ‘the number of police officer in each police force (UK)’ in 2016. You can find the relevant information <a href="https://en.wikipedia.org/wiki/List_of_police_forces_of_the_United_Kingdom">here</a>. (Use ‘Import Dataset’ in the environment window. Select ‘From Stata’. You will learn how to import data in the later weeks using R codes. Here, just try to remember R can import different types of data in various ways).
 <img src="imgs/hwimport2.png" /></p>
 <ol style="list-style-type: decimal">
 <li>What was the mean number of police officers in all police forces?</li>
-<li>Using the ‘filtering’ methods described compute the mean and standard deviation for the four largest forces and compare it with the mean and the standard deviation of the remainder police forces. Hint: see lab note 2.5. and use top4 variable.</li>
+<li>Using the ‘filtering’ methods described compute the mean and standard deviation for the four largest forces and compare it with the mean and the standard deviation of the remainder police forces. Hint: see lab note 2.5.</li>
 </ol>
 </div>
 <div id="week-2-homework-data-visualisations-with-r" class="section level2 hasAnchor" number="7.3">
