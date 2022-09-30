@@ -23,7 +23,7 @@
 <meta name="author" content="Reka Solymosi and Eon Kim (based on material developed with Juanjo Medina)" />
 
 
-<meta name="date" content="2022-09-29" />
+<meta name="date" content="2022-09-30" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -514,7 +514,7 @@ Personally I like boxplots (we will explain them in greater detail below) for sh
 <p>With a boxplot like this you can see straight away that the bulk of cheaper areas are very different from the bulk of more expensive areas. The first quartile of the distribution for low areas about matches the point at which we start to see <strong>outliers</strong> for the more expensive areas.</p>
 <p>This can be even more helpful when you have various groups. Let’s try an example using the <em>BCS0708</em> data frame. This is a dataset from the 2007/08 British Crime Survey.You can use the code below to download it.</p>
 <div class="sourceCode" id="cb159"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb159-1"><a href="data-visualisation-with-r-week-2.html#cb159-1" aria-hidden="true" tabindex="-1"></a><span class="do">##R in Windows have some problems with https addresses, that&#39;s why we need to do this first:</span></span>
-<span id="cb159-2"><a href="data-visualisation-with-r-week-2.html#cb159-2" aria-hidden="true" tabindex="-1"></a>urlfile<span class="ot">&lt;-</span><span class="st">&#39;https://raw.githubusercontent.com/jjmedinaariza/LAWS70821/master/BCS0708.csv&#39;</span></span>
+<span id="cb159-2"><a href="data-visualisation-with-r-week-2.html#cb159-2" aria-hidden="true" tabindex="-1"></a>urlfile<span class="ot">&lt;-</span><span class="st">&#39;https://raw.githubusercontent.com/eonk/dar_book/main/datasets/BCS0708.csv&#39;</span></span>
 <span id="cb159-3"><a href="data-visualisation-with-r-week-2.html#cb159-3" aria-hidden="true" tabindex="-1"></a><span class="co">#We create a data frame object reading the data from the remote .csv file</span></span>
 <span id="cb159-4"><a href="data-visualisation-with-r-week-2.html#cb159-4" aria-hidden="true" tabindex="-1"></a>BCS0708<span class="ot">&lt;-</span><span class="fu">read.csv</span>(<span class="fu">url</span>(urlfile))</span></code></pre></div>
 <p>This dataset contains a quantitative variable that measures the level of worry for crime (<em>tcviolent</em>): high scores represent high levels of worry. We are going to see how the score in this variable changes according to ethnicity (<em>ethgrp2</em>).</p>

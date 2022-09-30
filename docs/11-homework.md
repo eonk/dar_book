@@ -40,7 +40,7 @@ Acquire the “ukpolice” data from blackboard under the data for week 1. The d
 
 ## Week 2 Homework: Data visualisations with R
 
-Download from the GitHub repository the following dataset `crossnat.csv`. You url for the dataset is: https://raw.githubusercontent.com/jjmedinaariza/R-for-Criminologists/master/crossnat.csv
+Download from the GitHub repository the following dataset `crossnat.csv`. You url for the dataset is: https://raw.githubusercontent.com/eonk/dar_book/main/datasets/crossnat.csv
 
 Look at the instructions for how to download files from the web that we provided in Week 1. This comma-separated value file contains a number of variables about 194 countries. This data is collected for teaching purposes in January 2014. The information comes from a variety of sources (World Bank, United Nations, OCDE, etc) and it relates to the more recent year for which data was available then.
 
@@ -49,15 +49,15 @@ Sometimes students experience problems when downloading files within a Rmarkdown
 **step 1** Download the file into your global environment as covered in week 1;
 
 **step 2** Save the file into your hard-drive, for example write.csv(crossnat, "crossnat.csv") to save it as .csv in your working directory; 
-Then and only then read the data from your working directory into rmarkdown (e.g., using the read.csv function).
+**step 3** Then read the data from your working directory into rmarkdown (e.g., using the `read.csv()` function).
 
 Ok, these are the questions:
 
 1) Display a histogram for the prison rate per 100,000 population (`prisonrate`). Interpret and discuss your results. Can you identify any outliers? Are these errors? Are there plausible explanations for the extreme values in these countries?.
 
-2) Produce density estimates and boxplots to compare the prison rate according to various categories of the level of [human development](http://hdr.undp.org/en/content/human-development-index-hdi) per country. Interpret and discuss your results.
+2) Produce density estimates and boxplots to compare the prison rate according to various categories of the level of [human development](http://hdr.undp.org/en/content/human-development-index-hdi) per country (use 'cathid'). Interpret and discuss your results.
 
-3) Produce a scatterplot with a smoothed line to examine the relationship between `prisonrate` and `gdppercapita`. Interpret and discuss your results.
+3) Produce a scatter plot with a smoothed line to examine the relationship between `prisonrate` and `gdppercapita`. Interpret and discuss your results.
 
 4) Produce a scatterplot matrix to examine the relationship between `prisonrate`, `gdppercapita`, `urbanpop` (proportion of the population that lives in urban areas) and `homicide`(homicide per 100,000). Interpret and discuss your results.
 

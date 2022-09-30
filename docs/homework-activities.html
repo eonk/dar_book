@@ -23,7 +23,7 @@
 <meta name="author" content="Reka Solymosi and Eon Kim (based on material developed with Juanjo Medina)" />
 
 
-<meta name="date" content="2022-09-29" />
+<meta name="date" content="2022-09-30" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -301,17 +301,17 @@ Acquire the “ukpolice” data from blackboard under the data for week 1. The d
 </div>
 <div id="week-2-homework-data-visualisations-with-r" class="section level2 hasAnchor" number="7.3">
 <h2><span class="header-section-number">7.3</span> Week 2 Homework: Data visualisations with R<a href="homework-activities.html#week-2-homework-data-visualisations-with-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Download from the GitHub repository the following dataset <code>crossnat.csv</code>. You url for the dataset is: <a href="https://raw.githubusercontent.com/jjmedinaariza/R-for-Criminologists/master/crossnat.csv" class="uri">https://raw.githubusercontent.com/jjmedinaariza/R-for-Criminologists/master/crossnat.csv</a></p>
+<p>Download from the GitHub repository the following dataset <code>crossnat.csv</code>. You url for the dataset is: <a href="https://raw.githubusercontent.com/eonk/dar_book/main/datasets/crossnat.csv" class="uri">https://raw.githubusercontent.com/eonk/dar_book/main/datasets/crossnat.csv</a></p>
 <p>Look at the instructions for how to download files from the web that we provided in Week 1. This comma-separated value file contains a number of variables about 194 countries. This data is collected for teaching purposes in January 2014. The information comes from a variety of sources (World Bank, United Nations, OCDE, etc) and it relates to the more recent year for which data was available then.</p>
 <p>Sometimes students experience problems when downloading files within a Rmarkdown file. If you are getting stuck you may try an alternative. First get the file in your hard-drive using the console or a script (not Rmarkdown):</p>
 <p><strong>step 1</strong> Download the file into your global environment as covered in week 1;</p>
 <p><strong>step 2</strong> Save the file into your hard-drive, for example write.csv(crossnat, “crossnat.csv”) to save it as .csv in your working directory;
-Then and only then read the data from your working directory into rmarkdown (e.g., using the read.csv function).</p>
+<strong>step 3</strong> Then read the data from your working directory into rmarkdown (e.g., using the <code>read.csv()</code> function).</p>
 <p>Ok, these are the questions:</p>
 <ol style="list-style-type: decimal">
 <li><p>Display a histogram for the prison rate per 100,000 population (<code>prisonrate</code>). Interpret and discuss your results. Can you identify any outliers? Are these errors? Are there plausible explanations for the extreme values in these countries?.</p></li>
-<li><p>Produce density estimates and boxplots to compare the prison rate according to various categories of the level of <a href="http://hdr.undp.org/en/content/human-development-index-hdi">human development</a> per country. Interpret and discuss your results.</p></li>
-<li><p>Produce a scatterplot with a smoothed line to examine the relationship between <code>prisonrate</code> and <code>gdppercapita</code>. Interpret and discuss your results.</p></li>
+<li><p>Produce density estimates and boxplots to compare the prison rate according to various categories of the level of <a href="http://hdr.undp.org/en/content/human-development-index-hdi">human development</a> per country (use ‘cathid’). Interpret and discuss your results.</p></li>
+<li><p>Produce a scatter plot with a smoothed line to examine the relationship between <code>prisonrate</code> and <code>gdppercapita</code>. Interpret and discuss your results.</p></li>
 <li><p>Produce a scatterplot matrix to examine the relationship between <code>prisonrate</code>, <code>gdppercapita</code>, <code>urbanpop</code> (proportion of the population that lives in urban areas) and <code>homicide</code>(homicide per 100,000). Interpret and discuss your results.</p></li>
 </ol>
 </div>
