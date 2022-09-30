@@ -40,7 +40,7 @@ Acquire the “ukpolice” data from blackboard under the data for week 1. The d
 
 ## Week 2 Homework: Data visualisations with R
 
-Download from the GitHub repository the following dataset `crossnat.csv`. You url for the dataset is: https://raw.githubusercontent.com/jjmedinaariza/R-for-Criminologists/master/crossnat.csv
+Download from the GitHub repository the following dataset `crossnat.csv`. You url for the dataset is: https://raw.githubusercontent.com/eonk/dar_book/main/datasets/crossnat.csv
 
 Look at the instructions for how to download files from the web that we provided in Week 1. This comma-separated value file contains a number of variables about 194 countries. This data is collected for teaching purposes in January 2014. The information comes from a variety of sources (World Bank, United Nations, OCDE, etc) and it relates to the more recent year for which data was available then.
 
