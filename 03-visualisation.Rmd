@@ -19,9 +19,7 @@ If you don't already have the package installed (check you do), you will need to
  You will then need to load up the package
  
 ```{r}
-
 library(ggplot2)                                  
-
 ```
 
 The grammar of graphics upon which this package is based on defines various components of a graphic. Some of the most important are:
@@ -69,7 +67,6 @@ fbo_url <- "https://raw.githubusercontent.com/maczokni/modelling_book/master/dat
 # load readr library and use read_csv() function
 library(readr)
 fbo <- read_csv(url(fbo_url))
-
 ```
 
 
@@ -79,19 +76,15 @@ One thing from the first lab we mentioned is conventions in the naming ob object
 
 
 ```{r}
-
 names(fbo)
-
 ```
 
 To address this, we can use a function called `clean_names()` which lives inside the `janitor` package. This will replace any spaces with an underscore, and also turn any capital letters into lowercase. Much more tidy!
 
 ```{r, message=FALSE, warning=FALSE}
-
 library(janitor)
 
 fbo <- clean_names(fbo)
-
 ```
 
 Now let's explore the question of number of banning orders for clubs in different leagues. But as a first step, let's just plot the number of banning orders for each club. Let's build this plot:
