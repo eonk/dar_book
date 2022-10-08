@@ -59,12 +59,17 @@ Ok, these are the questions:
 
 ## Week 3 Homework: Foundations for inference (confidence intervals)
 
-We are going to use a dataset that is often employed in econometric research to investigate methods to estimate causal effects in non experimental scenarios. You need to use the so-called `lalonde` data available with the `arm` package. You will be able to find details about this dataset in the reference articles cited in the Help file. This is a smaller subset of a study that look at the effectiveness of job programs in a number of outcomes. For the homework you need to: 
+Download the following dataset `Seattle_Neighborhoods_Crime_RandomSample_dar.dta` from Blackbord and import the data into R.
 
-1) Visually explore the relationship of treatment with real earnings in 1975 using some of the graphical tools we introduced in week 2. 
-2) Use error bars, as descirbed in week 3, to compare the treatment and no treatment group in real earnings in 1975. 
-3) Use the t.test function to obtain the confidence intervals for the real earnings in 1975 for each of these two groups. 
-4) Use the procedures described in week 3 to estimate the confidence interval of the proportion of individuals with earnings being not zero in 1975 (u75) across the two levels of "treat". 
+Get to know your data, specifically how many variables and observations and what the data were collected for and how the data were collected. It is always good practice to understand the data you use. For information on the methodology (including data collection procedure), see: [Seattle Neighborhoods and Crime Survey, 2002-2003 (umich.edu)](https://www.icpsr.umich.edu/web/ICPSR/studies/28701/summary)
+
+I created a new variable "neigh_sd" composing variables from variables Q14A to Q14E, which shows "the level of neighbourhood social disorganisation"  
+1) Use the t.test() function to calculate 95% confidence interval of the mean for ‘neigh_sd’. How would you interpret the values? 
+2) Now calculate 99% confidence intervals of the mean for ‘neigh_sd’. How are these values different to that of the 95% confidence intervals? Why do you think that is?  
+
+Let’s look at another variable, of whether the respondent reported an incidence of theft to the police. This variable is called “Q61E_f” in your data. Use the attributes() function to learn about the variable. 
+1) What percentage of respondents who answered this question with Yes or No reported their theft to the police?
+2) Calculate 95% confidence intervals around this value (hint: look for the prop.table() function in the lab notes). What does this tell you? Interpret this in your own words below.
 
 ## Week 4: Hypothesis tests (comparing means)
 

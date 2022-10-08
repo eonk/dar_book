@@ -23,7 +23,7 @@
 <meta name="author" content="Reka Solymosi and Eon Kim (based on material developed with Juanjo Medina)" />
 
 
-<meta name="date" content="2022-10-03" />
+<meta name="date" content="2022-10-08" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -147,12 +147,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.6" data-path="a-first-lesson-about-r-week-0.html"><a href="a-first-lesson-about-r-week-0.html#more-on-packages"><i class="fa fa-check"></i><b>1.6</b> More on packages</a></li>
 <li class="chapter" data-level="1.7" data-path="a-first-lesson-about-r-week-0.html"><a href="a-first-lesson-about-r-week-0.html#using-objects"><i class="fa fa-check"></i><b>1.7</b> Using objects</a></li>
 <li class="chapter" data-level="1.8" data-path="a-first-lesson-about-r-week-0.html"><a href="a-first-lesson-about-r-week-0.html#more-on-objects"><i class="fa fa-check"></i><b>1.8</b> More on objects</a></li>
-<li class="chapter" data-level="1.9" data-path="a-first-lesson-about-r-week-0.html"><a href="a-first-lesson-about-r-week-0.html#vectors"><i class="fa fa-check"></i><b>1.9</b> Vectors</a></li>
-<li class="chapter" data-level="1.10" data-path="a-first-lesson-about-r-week-0.html"><a href="a-first-lesson-about-r-week-0.html#factors"><i class="fa fa-check"></i><b>1.10</b> Factors</a></li>
-<li class="chapter" data-level="1.11" data-path="a-first-lesson-about-r-week-0.html"><a href="a-first-lesson-about-r-week-0.html#tips-how-to-use-comment"><i class="fa fa-check"></i><b>1.11</b> Tips: How to use ‘comment’</a></li>
-<li class="chapter" data-level="1.12" data-path="a-first-lesson-about-r-week-0.html"><a href="a-first-lesson-about-r-week-0.html#tips-naming-conventions-for-objects-in-r"><i class="fa fa-check"></i><b>1.12</b> Tips: Naming conventions for objects in R</a></li>
-<li class="chapter" data-level="1.13" data-path="a-first-lesson-about-r-week-0.html"><a href="a-first-lesson-about-r-week-0.html#data-frame"><i class="fa fa-check"></i><b>1.13</b> Data frame</a></li>
-<li class="chapter" data-level="1.14" data-path="a-first-lesson-about-r-week-0.html"><a href="a-first-lesson-about-r-week-0.html#exploring-data"><i class="fa fa-check"></i><b>1.14</b> Exploring data</a></li>
+<li class="chapter" data-level="1.9" data-path="a-first-lesson-about-r-week-0.html"><a href="a-first-lesson-about-r-week-0.html#naming-conventions-for-objects-in-r"><i class="fa fa-check"></i><b>1.9</b> Naming conventions for objects in R</a></li>
+<li class="chapter" data-level="1.10" data-path="a-first-lesson-about-r-week-0.html"><a href="a-first-lesson-about-r-week-0.html#vectors"><i class="fa fa-check"></i><b>1.10</b> Vectors</a></li>
+<li class="chapter" data-level="1.11" data-path="a-first-lesson-about-r-week-0.html"><a href="a-first-lesson-about-r-week-0.html#factors"><i class="fa fa-check"></i><b>1.11</b> Factors</a></li>
+<li class="chapter" data-level="1.12" data-path="a-first-lesson-about-r-week-0.html"><a href="a-first-lesson-about-r-week-0.html#data-frame"><i class="fa fa-check"></i><b>1.12</b> Data frame</a></li>
+<li class="chapter" data-level="1.13" data-path="a-first-lesson-about-r-week-0.html"><a href="a-first-lesson-about-r-week-0.html#exploring-data"><i class="fa fa-check"></i><b>1.13</b> Exploring data</a></li>
+<li class="chapter" data-level="1.14" data-path="a-first-lesson-about-r-week-0.html"><a href="a-first-lesson-about-r-week-0.html#how-to-use-comment"><i class="fa fa-check"></i><b>1.14</b> How to use ‘comment’</a></li>
 <li class="chapter" data-level="1.15" data-path="a-first-lesson-about-r-week-0.html"><a href="a-first-lesson-about-r-week-0.html#quitting-rstudio"><i class="fa fa-check"></i><b>1.15</b> Quitting RStudio</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="getting-to-know-your-data-week-1.html"><a href="getting-to-know-your-data-week-1.html"><i class="fa fa-check"></i><b>2</b> Getting to know your data (week 1)</a>
@@ -286,14 +286,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>In this page you can see a download section and some files that can be accessed. One of them contains analytic code pertaining to the study and the other contains the data. You also see a link called <strong>metadata</strong>. Metadata is data about data, it simply provides you with some information about the data. If you clink in metadata you will see at the bottom a reference to the software the authors used (STATA). So we know these files are in <a href="https://www.stata.com/">STATA</a> proprietary format. Let’s download the data file and then read the data into R.</p>
 <p>You could just click “download” and then place the file in your project directory. Alternatively, and preferably, you may want to use code to make your whole work more reproducible. Think of it this way, every time you click or use drop down menus you are doing things that others cannot reproduce because there won’t be a written record of your steps. You will need though to do some clicking for finding out the required url you will use for writing your code. The file we want is the <code>AganStarrQJEData.dta</code>. Click in the name of this file. You will be taken to another webpage. On it you will see the download url. Copy and paste this url in your code below.</p>
 <div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="getting-to-know-your-data-week-1.html#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="co">#First, let&#39;s create an object with the link, paste the copied address here:</span></span>
-<span id="cb60-2"><a href="getting-to-know-your-data-week-1.html#cb60-2" aria-hidden="true" tabindex="-1"></a>data_url <span class="ot">&lt;-</span> <span class="st">&quot;https://dataverse.harvard.edu/api/access/datafile/3036350&quot;</span></span></code></pre></div>
+<span id="cb60-2"><a href="getting-to-know-your-data-week-1.html#cb60-2" aria-hidden="true" tabindex="-1"></a>urlfile <span class="ot">&lt;-</span> <span class="st">&quot;https://dataverse.harvard.edu/api/access/datafile/3036350&quot;</span></span></code></pre></div>
 <p>This data file is a STATA .dta file in our working directory. To read STATA files we will need the <em>haven</em> package. This is a package developed for importing different kind of data files into R. If you don’t have it you will need to install it. And then load it.</p>
 <div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb61-1"><a href="getting-to-know-your-data-week-1.html#cb61-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(haven)</span>
 <span id="cb61-2"><a href="getting-to-know-your-data-week-1.html#cb61-2" aria-hidden="true" tabindex="-1"></a><span class="co">#Now we can use the &#39;read_dta&#39; function, within this function we will</span></span>
 <span id="cb61-3"><a href="getting-to-know-your-data-week-1.html#cb61-3" aria-hidden="true" tabindex="-1"></a><span class="co">#pass an argument, url, specifying to the read_dta function the need to</span></span>
 <span id="cb61-4"><a href="getting-to-know-your-data-week-1.html#cb61-4" aria-hidden="true" tabindex="-1"></a><span class="co">#make a url connection. The url function takes as an argument the url</span></span>
-<span id="cb61-5"><a href="getting-to-know-your-data-week-1.html#cb61-5" aria-hidden="true" tabindex="-1"></a><span class="co">#we are using and that we encoded in the data_url object in our case.</span></span>
-<span id="cb61-6"><a href="getting-to-know-your-data-week-1.html#cb61-6" aria-hidden="true" tabindex="-1"></a>banbox <span class="ot">&lt;-</span> <span class="fu">read_dta</span>(<span class="fu">url</span>(data_url))</span></code></pre></div>
+<span id="cb61-5"><a href="getting-to-know-your-data-week-1.html#cb61-5" aria-hidden="true" tabindex="-1"></a><span class="co">#we are using and that we encoded in the urlfile object in our case.</span></span>
+<span id="cb61-6"><a href="getting-to-know-your-data-week-1.html#cb61-6" aria-hidden="true" tabindex="-1"></a>banbox <span class="ot">&lt;-</span> <span class="fu">read_dta</span>(<span class="fu">url</span>(urlfile))</span></code></pre></div>
 <p>You will need to pay attention to the file extension, to find the appropriate function to read in your file. For example, if something has the extension <code>.sav</code> that is a file used by the software SPSS. To read this, you would use the <code>read_spss()</code> function, also in the haven package.</p>
 <p>Some other file types need other packages. For example, to read in comma separated values or <code>.csv</code> files, you can use the <code>read_csv()</code> function from the <code>readr</code> package. To read in excel files, you would use the appropriate function from the <code>readxl</code> package, which might be <code>read_xls()</code> or <code>read_xlsx()</code> depending on the file extension.</p>
 </div>

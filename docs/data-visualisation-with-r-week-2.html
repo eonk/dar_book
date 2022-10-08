@@ -23,7 +23,7 @@
 <meta name="author" content="Reka Solymosi and Eon Kim (based on material developed with Juanjo Medina)" />
 
 
-<meta name="date" content="2022-10-03" />
+<meta name="date" content="2022-10-08" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -147,12 +147,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.6" data-path="a-first-lesson-about-r-week-0.html"><a href="a-first-lesson-about-r-week-0.html#more-on-packages"><i class="fa fa-check"></i><b>1.6</b> More on packages</a></li>
 <li class="chapter" data-level="1.7" data-path="a-first-lesson-about-r-week-0.html"><a href="a-first-lesson-about-r-week-0.html#using-objects"><i class="fa fa-check"></i><b>1.7</b> Using objects</a></li>
 <li class="chapter" data-level="1.8" data-path="a-first-lesson-about-r-week-0.html"><a href="a-first-lesson-about-r-week-0.html#more-on-objects"><i class="fa fa-check"></i><b>1.8</b> More on objects</a></li>
-<li class="chapter" data-level="1.9" data-path="a-first-lesson-about-r-week-0.html"><a href="a-first-lesson-about-r-week-0.html#vectors"><i class="fa fa-check"></i><b>1.9</b> Vectors</a></li>
-<li class="chapter" data-level="1.10" data-path="a-first-lesson-about-r-week-0.html"><a href="a-first-lesson-about-r-week-0.html#factors"><i class="fa fa-check"></i><b>1.10</b> Factors</a></li>
-<li class="chapter" data-level="1.11" data-path="a-first-lesson-about-r-week-0.html"><a href="a-first-lesson-about-r-week-0.html#tips-how-to-use-comment"><i class="fa fa-check"></i><b>1.11</b> Tips: How to use ‘comment’</a></li>
-<li class="chapter" data-level="1.12" data-path="a-first-lesson-about-r-week-0.html"><a href="a-first-lesson-about-r-week-0.html#tips-naming-conventions-for-objects-in-r"><i class="fa fa-check"></i><b>1.12</b> Tips: Naming conventions for objects in R</a></li>
-<li class="chapter" data-level="1.13" data-path="a-first-lesson-about-r-week-0.html"><a href="a-first-lesson-about-r-week-0.html#data-frame"><i class="fa fa-check"></i><b>1.13</b> Data frame</a></li>
-<li class="chapter" data-level="1.14" data-path="a-first-lesson-about-r-week-0.html"><a href="a-first-lesson-about-r-week-0.html#exploring-data"><i class="fa fa-check"></i><b>1.14</b> Exploring data</a></li>
+<li class="chapter" data-level="1.9" data-path="a-first-lesson-about-r-week-0.html"><a href="a-first-lesson-about-r-week-0.html#naming-conventions-for-objects-in-r"><i class="fa fa-check"></i><b>1.9</b> Naming conventions for objects in R</a></li>
+<li class="chapter" data-level="1.10" data-path="a-first-lesson-about-r-week-0.html"><a href="a-first-lesson-about-r-week-0.html#vectors"><i class="fa fa-check"></i><b>1.10</b> Vectors</a></li>
+<li class="chapter" data-level="1.11" data-path="a-first-lesson-about-r-week-0.html"><a href="a-first-lesson-about-r-week-0.html#factors"><i class="fa fa-check"></i><b>1.11</b> Factors</a></li>
+<li class="chapter" data-level="1.12" data-path="a-first-lesson-about-r-week-0.html"><a href="a-first-lesson-about-r-week-0.html#data-frame"><i class="fa fa-check"></i><b>1.12</b> Data frame</a></li>
+<li class="chapter" data-level="1.13" data-path="a-first-lesson-about-r-week-0.html"><a href="a-first-lesson-about-r-week-0.html#exploring-data"><i class="fa fa-check"></i><b>1.13</b> Exploring data</a></li>
+<li class="chapter" data-level="1.14" data-path="a-first-lesson-about-r-week-0.html"><a href="a-first-lesson-about-r-week-0.html#how-to-use-comment"><i class="fa fa-check"></i><b>1.14</b> How to use ‘comment’</a></li>
 <li class="chapter" data-level="1.15" data-path="a-first-lesson-about-r-week-0.html"><a href="a-first-lesson-about-r-week-0.html#quitting-rstudio"><i class="fa fa-check"></i><b>1.15</b> Quitting RStudio</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="getting-to-know-your-data-week-1.html"><a href="getting-to-know-your-data-week-1.html"><i class="fa fa-check"></i><b>2</b> Getting to know your data (week 1)</a>
@@ -298,11 +298,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Let’s have a look at some data about <a href="https://www.gov.uk/government/publications/football-related-arrests-and-banning-orders-england-and-wales-season-2016-to-2017/football-related-arrests-and-banning-order-statistics-england-and-wales-2016-to-2017-season">banning orders</a> for different football clubs.</p>
 <p>First you need to read the data. We keep this data in a website and you can download it with the following code:</p>
 <div class="sourceCode" id="cb120"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb120-1"><a href="data-visualisation-with-r-week-2.html#cb120-1" aria-hidden="true" tabindex="-1"></a><span class="co"># save URL into an object</span></span>
-<span id="cb120-2"><a href="data-visualisation-with-r-week-2.html#cb120-2" aria-hidden="true" tabindex="-1"></a>fbo_url <span class="ot">&lt;-</span> <span class="st">&quot;https://raw.githubusercontent.com/maczokni/modelling_book/master/datasets/FootbalBanningOrders.csv&quot;</span></span>
+<span id="cb120-2"><a href="data-visualisation-with-r-week-2.html#cb120-2" aria-hidden="true" tabindex="-1"></a>urlfile <span class="ot">&lt;-</span> <span class="st">&quot;https://raw.githubusercontent.com/eonk/dar_book/main/datasets/FootbalBanningOrders.csv&quot;</span></span>
 <span id="cb120-3"><a href="data-visualisation-with-r-week-2.html#cb120-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb120-4"><a href="data-visualisation-with-r-week-2.html#cb120-4" aria-hidden="true" tabindex="-1"></a><span class="co"># load readr library and use read_csv() function</span></span>
 <span id="cb120-5"><a href="data-visualisation-with-r-week-2.html#cb120-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr)</span>
-<span id="cb120-6"><a href="data-visualisation-with-r-week-2.html#cb120-6" aria-hidden="true" tabindex="-1"></a>fbo <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="fu">url</span>(fbo_url))</span></code></pre></div>
+<span id="cb120-6"><a href="data-visualisation-with-r-week-2.html#cb120-6" aria-hidden="true" tabindex="-1"></a>fbo <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="fu">url</span>(urlfile))</span></code></pre></div>
 <pre><code>## New names:
 ## Rows: 119 Columns: 4
 ## ── Column specification

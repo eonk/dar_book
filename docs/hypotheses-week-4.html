@@ -23,7 +23,7 @@
 <meta name="author" content="Reka Solymosi and Eon Kim (based on material developed with Juanjo Medina)" />
 
 
-<meta name="date" content="2022-10-03" />
+<meta name="date" content="2022-10-08" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -147,12 +147,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.6" data-path="a-first-lesson-about-r-week-0.html"><a href="a-first-lesson-about-r-week-0.html#more-on-packages"><i class="fa fa-check"></i><b>1.6</b> More on packages</a></li>
 <li class="chapter" data-level="1.7" data-path="a-first-lesson-about-r-week-0.html"><a href="a-first-lesson-about-r-week-0.html#using-objects"><i class="fa fa-check"></i><b>1.7</b> Using objects</a></li>
 <li class="chapter" data-level="1.8" data-path="a-first-lesson-about-r-week-0.html"><a href="a-first-lesson-about-r-week-0.html#more-on-objects"><i class="fa fa-check"></i><b>1.8</b> More on objects</a></li>
-<li class="chapter" data-level="1.9" data-path="a-first-lesson-about-r-week-0.html"><a href="a-first-lesson-about-r-week-0.html#vectors"><i class="fa fa-check"></i><b>1.9</b> Vectors</a></li>
-<li class="chapter" data-level="1.10" data-path="a-first-lesson-about-r-week-0.html"><a href="a-first-lesson-about-r-week-0.html#factors"><i class="fa fa-check"></i><b>1.10</b> Factors</a></li>
-<li class="chapter" data-level="1.11" data-path="a-first-lesson-about-r-week-0.html"><a href="a-first-lesson-about-r-week-0.html#tips-how-to-use-comment"><i class="fa fa-check"></i><b>1.11</b> Tips: How to use ‘comment’</a></li>
-<li class="chapter" data-level="1.12" data-path="a-first-lesson-about-r-week-0.html"><a href="a-first-lesson-about-r-week-0.html#tips-naming-conventions-for-objects-in-r"><i class="fa fa-check"></i><b>1.12</b> Tips: Naming conventions for objects in R</a></li>
-<li class="chapter" data-level="1.13" data-path="a-first-lesson-about-r-week-0.html"><a href="a-first-lesson-about-r-week-0.html#data-frame"><i class="fa fa-check"></i><b>1.13</b> Data frame</a></li>
-<li class="chapter" data-level="1.14" data-path="a-first-lesson-about-r-week-0.html"><a href="a-first-lesson-about-r-week-0.html#exploring-data"><i class="fa fa-check"></i><b>1.14</b> Exploring data</a></li>
+<li class="chapter" data-level="1.9" data-path="a-first-lesson-about-r-week-0.html"><a href="a-first-lesson-about-r-week-0.html#naming-conventions-for-objects-in-r"><i class="fa fa-check"></i><b>1.9</b> Naming conventions for objects in R</a></li>
+<li class="chapter" data-level="1.10" data-path="a-first-lesson-about-r-week-0.html"><a href="a-first-lesson-about-r-week-0.html#vectors"><i class="fa fa-check"></i><b>1.10</b> Vectors</a></li>
+<li class="chapter" data-level="1.11" data-path="a-first-lesson-about-r-week-0.html"><a href="a-first-lesson-about-r-week-0.html#factors"><i class="fa fa-check"></i><b>1.11</b> Factors</a></li>
+<li class="chapter" data-level="1.12" data-path="a-first-lesson-about-r-week-0.html"><a href="a-first-lesson-about-r-week-0.html#data-frame"><i class="fa fa-check"></i><b>1.12</b> Data frame</a></li>
+<li class="chapter" data-level="1.13" data-path="a-first-lesson-about-r-week-0.html"><a href="a-first-lesson-about-r-week-0.html#exploring-data"><i class="fa fa-check"></i><b>1.13</b> Exploring data</a></li>
+<li class="chapter" data-level="1.14" data-path="a-first-lesson-about-r-week-0.html"><a href="a-first-lesson-about-r-week-0.html#how-to-use-comment"><i class="fa fa-check"></i><b>1.14</b> How to use ‘comment’</a></li>
 <li class="chapter" data-level="1.15" data-path="a-first-lesson-about-r-week-0.html"><a href="a-first-lesson-about-r-week-0.html#quitting-rstudio"><i class="fa fa-check"></i><b>1.15</b> Quitting RStudio</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="getting-to-know-your-data-week-1.html"><a href="getting-to-know-your-data-week-1.html"><i class="fa fa-check"></i><b>2</b> Getting to know your data (week 1)</a>
@@ -327,7 +327,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ol>
 <p>You may also want to check for outliers by plotting the data, for in some cases this may distort your results, particularly with smaller samples. So we are ok with 1 and 2, and are going to proceed as if 4 is met. What about normality? With large samples you can relax this assumption. However, you may want to also check if your sample data are normally distributed.</p>
 <div class="sourceCode" id="cb422"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb422-1"><a href="hypotheses-week-4.html#cb422-1" aria-hidden="true" tabindex="-1"></a><span class="do">##R in Windows have some problems with https addresses, that&#39;s why we need to do this first:</span></span>
-<span id="cb422-2"><a href="hypotheses-week-4.html#cb422-2" aria-hidden="true" tabindex="-1"></a>urlfile<span class="ot">&lt;-</span><span class="st">&#39;https://raw.githubusercontent.com/jjmedinaariza/LAWS70821/master/BCS0708.csv&#39;</span></span>
+<span id="cb422-2"><a href="hypotheses-week-4.html#cb422-2" aria-hidden="true" tabindex="-1"></a>urlfile<span class="ot">&lt;-</span><span class="st">&#39;https://raw.githubusercontent.com/eonk/dar_book/main/datasets/BCS0708.csv&#39;</span></span>
 <span id="cb422-3"><a href="hypotheses-week-4.html#cb422-3" aria-hidden="true" tabindex="-1"></a><span class="co">#We create a data frame object reading the data from the remote .csv file</span></span>
 <span id="cb422-4"><a href="hypotheses-week-4.html#cb422-4" aria-hidden="true" tabindex="-1"></a>BCS0708<span class="ot">&lt;-</span><span class="fu">read.csv</span>(<span class="fu">url</span>(urlfile))</span></code></pre></div>
 <div class="sourceCode" id="cb423"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb423-1"><a href="hypotheses-week-4.html#cb423-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2,<span class="at">quietly=</span><span class="cn">TRUE</span>, <span class="at">warn.conflicts=</span><span class="cn">FALSE</span>)</span>
@@ -621,8 +621,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## 
 ## Test statistic: 45.3591 
 ## p-value: 0 
-## Variance explained: 0.083 
-## Effect size: 0.289</code></pre>
+## Variance explained: 0.084 
+## Effect size: 0.29</code></pre>
 <p>As with the standard ANOVA and the Welch version, we still get a significant result.</p>
 </div>
 <div id="post-hoc-comparisons" class="section level3 hasAnchor" number="6.5.6">

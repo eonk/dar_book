@@ -64,11 +64,11 @@ First you need to read the data. We keep this data in a website and you can down
 
 ```r
 # save URL into an object
-fbo_url <- "https://raw.githubusercontent.com/maczokni/modelling_book/master/datasets/FootbalBanningOrders.csv"
+urlfile <- "https://raw.githubusercontent.com/eonk/dar_book/main/datasets/FootbalBanningOrders.csv"
 
 # load readr library and use read_csv() function
 library(readr)
-fbo <- read_csv(url(fbo_url))
+fbo <- read_csv(url(urlfile))
 ```
 
 ```

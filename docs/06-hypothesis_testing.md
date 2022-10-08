@@ -77,10 +77,9 @@ This t test makes a number of assumptions:
 You may also want to check for outliers by plotting the data, for in some cases this may distort your results, particularly with smaller samples. So we are ok with 1 and 2, and are going to proceed as if 4 is met. What about normality? With large samples you can relax this assumption. However, you may want to also check if your sample data are normally distributed.
 
 
-
 ```r
 ##R in Windows have some problems with https addresses, that's why we need to do this first:
-urlfile<-'https://raw.githubusercontent.com/jjmedinaariza/LAWS70821/master/BCS0708.csv'
+urlfile<-'https://raw.githubusercontent.com/eonk/dar_book/main/datasets/BCS0708.csv'
 #We create a data frame object reading the data from the remote .csv file
 BCS0708<-read.csv(url(urlfile))
 ```
@@ -640,8 +639,8 @@ t1waybt(tcviolent ~ ethgrp2, data = BCS0708, tr = .05, nboot = 599)
 ## 
 ## Test statistic: 45.3591 
 ## p-value: 0 
-## Variance explained: 0.083 
-## Effect size: 0.289
+## Variance explained: 0.084 
+## Effect size: 0.29
 ```
 
 As with the standard ANOVA and the Welch version, we still get a significant result.
