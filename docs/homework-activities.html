@@ -322,10 +322,10 @@ Acquire the “ukpolice” data from blackboard under the data for week 1. The d
 <h2><span class="header-section-number">7.4</span> Week 3 Homework: Foundations for inference (confidence intervals)<a href="homework-activities.html#week-3-homework-foundations-for-inference-confidence-intervals" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Download the following dataset <code>Seattle_Neighborhoods_Crime_RandomSample_dar.dta</code> from Blackbord and import the data into R. Get to know your data, specifically how many variables and observations and what the data were collected for and how the data were collected. It is always good practice to understand the data you use. For information on the methodology (including data collection procedure), see: <a href="https://www.icpsr.umich.edu/web/ICPSR/studies/28701/summary">Seattle Neighborhoods and Crime Survey, 2002-2003 (umich.edu)</a></p>
 <p>I created a new variable <code>neigh_sd</code> composing variables from variables Q14A to Q14E, which shows ‘the level of neighbourhood social disorganisation’<br />
-1) Use the <code>t.test()</code> function to calculate 95% confidence interval of the mean for <code>neigh_sd</code>. How would you interpret the values?
+1) Use the <code>t.test()</code> function to calculate 95% confidence interval of the mean for <code>neigh_sd</code>. How would you interpret the values?<br />
 2) Now calculate 99% confidence intervals of the mean for <code>neigh_sd</code>. How are these values different to that of the 95% confidence intervals? Why do you think that is?</p>
 <p>Let’s look at another variable, of whether the respondent reported an incidence of theft to the police. This variable is called <code>Q61E_f</code> in your data. Use the <code>attributes()</code> function to learn about the variable. (Hint: Remember this is a categorical variable so you need to transform the data into a ‘factor’ variable).
-1) What percentage of respondents who answered this question with Yes or No reported their theft to the police?
+1) What percentage of respondents who answered this question with Yes or No reported their theft to the police?<br />
 2) Calculate 95% confidence intervals around this value (hint: look for the <code>prop.table()</code> function in the lab notes). What does this tell you? Interpret this in your own words below.</p>
 </div>
 <div id="week-4-hypothesis-tests-comparing-means" class="section level2 hasAnchor" number="7.5">

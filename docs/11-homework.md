@@ -62,12 +62,12 @@ Ok, these are the questions:
 Download the following dataset `Seattle_Neighborhoods_Crime_RandomSample_dar.dta` from Blackbord and import the data into R. Get to know your data, specifically how many variables and observations and what the data were collected for and how the data were collected. It is always good practice to understand the data you use. For information on the methodology (including data collection procedure), see: [Seattle Neighborhoods and Crime Survey, 2002-2003 (umich.edu)](https://www.icpsr.umich.edu/web/ICPSR/studies/28701/summary)
 
 I created a new variable `neigh_sd` composing variables from variables Q14A to Q14E, which shows 'the level of neighbourhood social disorganisation'  
-1) Use the `t.test()` function to calculate 95% confidence interval of the mean for `neigh_sd`. How would you interpret the values? 
-2) Now calculate 99% confidence intervals of the mean for `neigh_sd`. How are these values different to that of the 95% confidence intervals? Why do you think that is?  
+1) Use the `t.test()` function to calculate 95% confidence interval of the mean for `neigh_sd`. How would you interpret the values?   
+2) Now calculate 99% confidence intervals of the mean for `neigh_sd`. How are these values different to that of the 95% confidence intervals? Why do you think that is?   
 
 Let’s look at another variable, of whether the respondent reported an incidence of theft to the police. This variable is called `Q61E_f` in your data. Use the `attributes()` function to learn about the variable. (Hint: Remember this is a categorical variable so you need to transform the data into a 'factor' variable).
-1) What percentage of respondents who answered this question with Yes or No reported their theft to the police?
-2) Calculate 95% confidence intervals around this value (hint: look for the `prop.table()` function in the lab notes). What does this tell you? Interpret this in your own words below.
+1) What percentage of respondents who answered this question with Yes or No reported their theft to the police?  
+2) Calculate 95% confidence intervals around this value (hint: look for the `prop.table()` function in the lab notes). What does this tell you? Interpret this in your own words below.  
 
 ## Week 4: Hypothesis tests (comparing means)
 
