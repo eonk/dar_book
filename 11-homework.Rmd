@@ -65,7 +65,7 @@ I created a new variable `neigh_sd` composing variables from variables Q14A to Q
 1) Use the `t.test()` function to calculate 95% confidence interval of the mean for `neigh_sd`. How would you interpret the values? 
 2) Now calculate 99% confidence intervals of the mean for `neigh_sd`. How are these values different to that of the 95% confidence intervals? Why do you think that is?  
 
-Let’s look at another variable, of whether the respondent reported an incidence of theft to the police. This variable is called `Q61E_f` in your data. Use the `attributes()` function to learn about the variable. 
+Let’s look at another variable, of whether the respondent reported an incidence of theft to the police. This variable is called `Q61E_f` in your data. Use the `attributes()` function to learn about the variable. (Hint: Remember this is a categorical variable so you need to transform the data into a 'factor' variable).
 1) What percentage of respondents who answered this question with Yes or No reported their theft to the police?
 2) Calculate 95% confidence intervals around this value (hint: look for the `prop.table()` function in the lab notes). What does this tell you? Interpret this in your own words below.
 
