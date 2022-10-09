@@ -65,24 +65,17 @@ I created a new variable `neigh_sd` composing variables from variables Q14A to Q
 1) Use the `t.test()` function to calculate 95% confidence interval of the mean for `neigh_sd`. How would you interpret the values?   
 2) Now calculate 99% confidence intervals of the mean for `neigh_sd`. How are these values different to that of the 95% confidence intervals? Why do you think that is?   
 
-Let’s look at another variable, of whether the respondent reported an incidence of theft to the police. This variable is called `Q61E_f` in your data. Use the `attributes()` function to learn about the variable. (Hint: Remember this is a categorical variable so you need to transform the data into a 'factor' variable).
+Let’s look at another variable, of whether the respondent reported an incidence of theft to the police. This variable is called `Q61E_f` in your data. Use the `attributes()` function to learn about the variable. Remember this is a categorical variable so you need to transform the data into a 'factor' variable. 
 1) What percentage of respondents who answered this question with Yes or No reported their theft to the police?  
 2) Calculate 95% confidence intervals around this value (hint: look for the `prop.table()` function in the lab notes). What does this tell you? Interpret this in your own words below.  
 
 ## Week 4: Hypothesis tests (comparing means)
 
-For this exercise you need to download a dataset available in the [UK Data Archive](http://www.data-archive.ac.uk/). The dataset belongs to an old study comparing treatments for juvenile offenders. You can find out more details about it [here](http://discover.ukdataservice.ac.uk/catalogue/?sn=3168&type=Data%20catalogue). Make sure you read the User Guide and the Codebook at the bottom of the page. We are going to try to reproduce the results obtained by the researchers. In order to be able to download data from this repository you have to first register with it. To do so follow the instructions [here](http://ukdataservice.ac.uk/get-data/how-to-access/registration.aspx) and then follow the [instructions for downloading data](http://ukdataservice.ac.uk/get-data/how-to-access/downloadorder.aspx). Why so many loops? This will teach you how to use this most valuable resource. This repository is full of data you can use for your own purposes, including the full version of the Crime Survey of England and Wales. When downloading the file you will be given the choice of different formats. Save the file in .tab delimited format. Then you could adapt the code below to read it into R.
+For this task, we will use data from the Crime Survey for England and Wales. Specifically we’ll be working with data from the 2013/14 year. You can find the data on blackboard in the data for this week folder. Note the extension (.dta) so remember what you will need for importing your data.
 
-
-```r
-Kingswood <- read.table("g168.tab", sep="\t", header=TRUE)
-```
-
-You will need to look at the Codebook to understand the meaning of the variable names and what they are measuring. But know that the `HOUSE` variable identifies the treatment condition. The class 2 corresponds to the comparison group and the class 3 corresponds to the experimental group. Notice however that this is an integer vector, so you will need to redefine it as a factor in order to be able to use it in your tests.
-
-BEWARE: if you do not pay close attention to the codebook there is a very good chance you will get the wrong answers below. Exploring the data beforehand can also help you to identify things you may have to do before running your hypothesis test.
-
-1) Is there a relationship between the experimental treatment and number of court appearances after release? Interpret and discuss your results.
-2) Is there a relationship between the experimental treatment and the seriousness score of the first offence after release? Interpret and discuss your results.
-3) Consider now whether including the third site in the study (House 1) allows us to see any differences in recidivism using the two outcome measures used so far. Interpret and discuss your results.
-4) Is there a relationship between criminal record of parents and number of court appearances after release? Interpret and discuss your results.
+1) We want to explore the difference in fear of crime between people who have been victims of crime and those who have not. The variable which tells you how many people had been victims in the last year is “bcsvictim”. Recode this variable so the values are meaningful rather than 0 and 1.  (Hint: you can use `attributes()` and `as_factor()` or `mutate()` and `case_when()`, look through past weeks for help).     
+2) Create a frequency table and tell me how many people in the data set were victims of crime in the last year.     
+3) Now compare visually the distribution of the `worryx` variable between those who had and hadn’t been victims of crime in the last year. Choose the type of plot you think would be most appropriate. Who do you think has higher scores on fear of crime? Interpret this in your own words below.      
+4) What is the mean (average) score on `worryx` (fear of crime score) for those who had been victims of crime? What about those who had not?. Now what do you think who has higher scores of worry?   
+5) Use the appropriate statistical test to tell me whether or not there is a statistically significant difference (with alpha = 0.05) in worry between those who have been victim of crime and those who have not. Explain your answer.    
+6) What does this significant effect mean? How big is the difference in mean fear of crime scores between the groups? Explain in your own words as well this result. 

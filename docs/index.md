@@ -1,7 +1,7 @@
 --- 
 title: "Data Analysis in R & RStudio"
 author: "Reka Solymosi and Eon Kim (based on material developed with Juanjo Medina)"
-date: "2022-10-08"
+date: "2022-10-09"
 site: bookdown::bookdown_site
 documentclass: book
 biblio-style: apalike

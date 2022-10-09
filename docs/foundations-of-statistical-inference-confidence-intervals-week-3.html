@@ -23,7 +23,7 @@
 <meta name="author" content="Reka Solymosi and Eon Kim (based on material developed with Juanjo Medina)" />
 
 
-<meta name="date" content="2022-10-08" />
+<meta name="date" content="2022-10-09" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -469,10 +469,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>While the sample mean may be the best single number to use as an estimate of the population mean, particularly with large samples, each sample mean will continue to come with some sample error (with some distance from the population mean). How can we take into account the uncertainty in estimating the population mean that derives from this fact?</p>
 <p>The key to solving the problem relies in the fact that the sampling distribution of the means will approach normality with large samples. <em>If we can assume that the sampling distribution of the means is normally distributed</em> then we can take advantage of the properties of the <strong>standard normal distribution</strong>.</p>
 <p>One of the peculiarities of the standard normal distribution is that we know the proportion of cases that fall within standard deviation units away from the mean. In the graphic below you can see the percentage of cases that fall within one and two standard deviations from the mean in the standard normal distribution:</p>
-<div class="figure">
-<img src="imgs/normald.png" alt="" />
-<p class="caption">Standard normal distribution f(z)</p>
-</div>
+<p><img src="imgs/normald.png" /></p>
 <p>We know that the sampling distribution of the means can be assumed with large samples to have a shape like this. We saw that when we run our sampling experiment. You can think of the sampling distribution of the means as the distribution of sampling error. Most sample means fall fairly close to the <em>expected value</em> (i.e., the population mean) and so have small sampling error; many fall a moderate distance away; and just a few fall in the tails of the sampling distribution, which signals large estimation errors. So although working with sample data we don’t have a precise distance of our sample mean from the population mean, we now have a model that tells us how that distance behaves (i.e., it follows a normal distribution). Let this sink in for a few seconds.</p>
 <p>This is very useful because then we can use this knowledge to generate what we call the <strong>margin of error</strong>. The margin of error is simply <em>the largest likely sampling error</em>. In social science we typically choose likely to imply 95%. So that there is a 95% chance that the sampling error is less than the margin of error. By extension this means that there is only a 5% chance that the sampling error will be bigger: that we have been very unlucky and our sample mean falls in one of the tails of the sampling distribution. Again, this may sound a bit abstract but below it will become clearer.</p>
 <p>Looking at the theoretical standard normal distribution we know that about 95% of the cases fall within 2 standard deviations on either side of the mean. We know then that 95% of the sample means (95.46% to be more precise) will fall within two standard errors of the expected value (e.g., the mean of the sampling distribution). So we can say that the margin of error, the largest likely estimation error, equals 2 standard errors. More accurately, the margin of error equals 1.96 standard errors (1.96 corresponds to 95% whereas the value 2 corresponds to 95.46%).</p>

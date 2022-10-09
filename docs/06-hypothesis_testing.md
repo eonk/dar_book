@@ -6,21 +6,21 @@ In the last unit we learned how to think about and build confidence intervals. W
 
 Last week we saw how we could use confidence intervals as well to form a view about whether there are differences across groups in the population. And we also saw how we could do "inference by eye" by virtue of visually comparing the confidence interval for the estimated mean value of fear for men and the estimated mean value of fear for women. Now we are going to use a different approach to make inferences about the existence of these differences in the population: hypothesis testing.
 
-Wikipedia defines a statistical hypothesis test as "a method of making decisions using data from a scientific study". The logic of hypothesis testing is based in the work of a number of pioneers in the field of statistics, the British Ronald Fisher and Egon Pearson and the Polish Jerzy Neyman . This work is so important that [some people argue](http://simplystatistics.org/2012/03/07/r-a-fisher-is-the-most-influential-scientist-ever/) that Sir Ronald Fisher is one of the most influential academics in the history of science; not a small feat! 
+Wikipedia defines a statistical hypothesis test as "a method of making decisions using data from a scientific study". The logic of hypothesis testing is based in the work of a number of pioneers in the field of statistics, the British Ronald Fisher and Egon Pearson and the Polish Jerzy Neyman . This work is so important that [some people argue](https://simplystatistics.tumblr.com/post/18903448428/ra-fisher-is-the-most-influential-scientist-ever) that Sir Ronald Fisher is one of the most influential academics in the history of science; not a small feat! 
 
 Hypothesis testing, or null hypothesis testing (NHST) as it is often referred to, proceeds in a number of steps. 
 
-1.  **We always start with a research question** 
+1.**We always start with a research question** 
 
 Our research questions in criminology can vary: Are ethnic minorities more likely to be stopped and searched? Does punishing offenders reduces crime? Is crime going down? Is self-control associated with offending? Here we are asking are women more afraid of violent crime than men?
 
-2. **To answer a research question we have to formulate at least one and sometimes several research hypotheses related to it** 
+2.**To answer a research question we have to formulate at least one and sometimes several research hypotheses related to it** 
 
 A research hypothesis is simply a proposed answer to our research question that we can test by carrying out some research. Research hypothesis can be directional and non-directional:
 
->"When the research hypothesis does not indicate a specific type of outcome, stating only that there is a relationship or a difference, we say that it is a **nondirectional hypothesis**. However, in those cases where a researcher has a very clear idea of what to expect -based on prior research evidence and/or theory -the research hypothesis may be more precise. In this case, the researcher may specify the nature of the relationship that is expected. Such a research hypothesis is called a **directional hypothesis**. When a directional hypothesis is used, the researcher states at the outset that he or she is interested in a specific type of outcome -for example, that one group has more arrests than another. Suppose we are interested in comparing the arrest records of drug involved offenders with those of offenders who do not use drugs. Our research hypothesis might be simply that the arrest records of drug involved offenders and offenders who do not use drugs are different (a nondirectional hypothesis). But based on prior knowledge of criminal behaviour among drug-involved offenders, we might want to state a directional hypothesis -that drug-involved offenders have more serious arrest records than do non-drug involved offenders. One problem with choosing the latter option is that if we state our research hypothesis as a directional hypothesis, we are stating that we are not interested in outcomes that fall in the opposite direction. In criminal justice research, we can often be surprised by what we learn in a study. Accordingly, researchers generally are cautious in defining a directional research hypothesis" (Weisburd and Britt, 2010: 120)
+>"When the research hypothesis does not indicate a specific type of outcome, stating only that there is a relationship or a difference, we say that it is a **non-directional hypothesis**. However, in those cases where a researcher has a very clear idea of what to expect -based on prior research evidence and/or theory -the research hypothesis may be more precise. In this case, the researcher may specify the nature of the relationship that is expected. Such a research hypothesis is called a **directional hypothesis**. When a directional hypothesis is used, the researcher states at the outset that he or she is interested in a specific type of outcome -for example, that one group has more arrests than another. Suppose we are interested in comparing the arrest records of drug involved offenders with those of offenders who do not use drugs. Our research hypothesis might be simply that the arrest records of drug involved offenders and offenders who do not use drugs are different (a nondirectional hypothesis). But based on prior knowledge of criminal behaviour among drug-involved offenders, we might want to state a directional hypothesis -that drug-involved offenders have more serious arrest records than do non-drug involved offenders. One problem with choosing the latter option is that if we state our research hypothesis as a directional hypothesis, we are stating that we are not interested in outcomes that fall in the opposite direction. In criminal justice research, we can often be surprised by what we learn in a study. Accordingly, researchers generally are cautious in defining a directional research hypothesis" (Weisburd and Britt, 2010: 120)
 
-In our example, the research hypothesis will be nondirectional and simply state that there are differences in the fear of violent crime among men and women.
+In our example, the research hypothesis will be non-directional and simply state that there are differences in the fear of violent crime among men and women.
 
 3. **The following step is to formulate what is called a null hypothesis**
 
@@ -32,7 +32,7 @@ De Veaux et al (2012) explain the logic of hypothesis testing as being similar t
 
 >"the null hypothesis is that the defendant is innocent... The evidence takes the form of facts that seem to contradict the presumption of innocence. For us" (researchers) "this means collecting data... The next step is to judge the evidence. Evaluating the evidence is the responsibility of the jury in a trial, but if falls on your shoulders in hypothesis testing. The jury considers the evidence in light of the presumption of innocence and judges whether the evidence against the defendant would be plausible if the defendant were in fact innocent. Like the jury, you ask, **'Could these data plausibly have happened by chance if the null hypothesis were true?'** If they are unlikely to have occurred, then the evidence raises a reasonable doubt about the null hypothesis. Ultimately, you must make a decision. The standard of beyond a reasonable doubt is wonderfully ambiguous... But when you ask the same question of your null hypothesis, you have the advantage of being able to quantify exactly how surprising the evidence would be were the null hypothesis true" (De Veaux et al. 2012: 479)
 
-So, in hypothesis testing we look at our observed sample data. In our case, we look at the difference in fear of violent crime for males and females and we ask ourselves the question: is the observed difference likely to have come from a population where the real difference is zero (as our null hypothesis specifies)? As you can see, testing against the null gives us the advantage of testing against a specific value. We can compare the value that we observe with zero, the precise value hypothesised by the null hypothesis. *The downsise of it is that few things are exactly the same in nature.* So to say that the level of fear of crime in men and women is probably not exactly the same (e.g., a difference of zero) is arguably not always going to give us the answer that we want.
+So, in hypothesis testing we look at our observed sample data. In our case, we look at the difference in fear of violent crime for males and females and we ask ourselves the question: is the observed difference likely to have come from a population where the real difference is zero (as our null hypothesis specifies)? As you can see, testing against the null gives us the advantage of testing against a specific value. We can compare the value that we observe with zero, the precise value hypothesised by the null hypothesis. *The downsise of it is that few things are exactly the same in nature*. So to say that the level of fear of crime in men and women is probably not exactly the same (e.g., a difference of zero) is arguably not always going to give us the answer that we want.
 
 4. **The fundamental step in hypothesis testing, therefore, is the question: are the observed data surprising, given the null hypothesis? And the key question is to determine exactly how likely the data we observed would be were the null hypothesis a true model of the world**
 
@@ -62,7 +62,7 @@ One final word. P values have attracted a lot of debate over the years. They are
 
 ## Comparing means across two groups (the t test)
 
-Let's elaborate with our example. Our research question is whether women are more afraid of crime. We are going to test a non-directional hypothesis and use an alpha level of .05. The test we use in this case is the t test, which relies in the t Student distribution introduced last week. This test makes a number of assumptions that we need to check first.
+Let's elaborate with our example. Our research question is whether women are more afraid of crime. We are going to test a non-directional hypothesis and use an alpha level of .05. The test we use in this case is the t test, which relies in the Student's t-distribution introduced last week. This test makes a number of assumptions that we need to check first.
 
 This t test makes a number of assumptions:
 
@@ -86,7 +86,7 @@ BCS0708<-read.csv(url(urlfile))
 
 
 ```r
-library(ggplot2,quietly=TRUE, warn.conflicts=FALSE)
+library(ggplot2)
 ggplot(BCS0708, aes(x = tcviolent, colour = sex)) + #you will need to load the data as explained in week 1
   geom_density() 
 ```
@@ -142,7 +142,7 @@ We can always look at **standardised measure of the effect size**. You will find
 
 
 ```r
-library(effsize, quietly=TRUE, warn.conflicts=FALSE)
+library(effsize)
 cohen.d(BCS0708$tcviolent ~ BCS0708$sex)
 ```
 
@@ -167,7 +167,6 @@ This is what you would write in your "Findings" section. In your "Conclusions" y
 One important thing to remember is that when doing hypothesis testing there is always the possibility of error. Our statements are probabilistic. We could be rejecting the null hypothesis when we shouldn't (false positive or Type I error), if we are using an alpha level of .05 this may happen 5% of the time, or we may fail to reject the null hypothesis when we should (false negative or Type II error).
 
 ![Errors](http://flowingdata.com/wp-content/uploads/2014/05/Type-I-and-II-errors1-625x468.jpg)
-
 
 ## Power analysis
 
@@ -244,7 +243,7 @@ With sample sizes this large, you are unlikely to run into problems with power. 
 
 We have used the t test to assess differences in a metric variable across two groups defined by a categorical variable. As we have explained during the class, if you are interested in comparing across more than two groups then you cannot run multiple t tests. Why? Because we would run into the problem of [**multiple comparisons**](http://en.wikipedia.org/wiki/Multiple_comparisons_problem) illustrated below:
 
-![xkcd](http://imgs.xkcd.com/comics/significant.png)
+![](http://imgs.xkcd.com/comics/significant.png)
 
 By running multiple comparisons you increase the change that you find significant differences by random chance alone. Imagine you throw a six face dice with numbers from 1 to 6. What is the probability of getting a 1? Right, 1/6. Now. Imagine that we throw the dice 6 times. What is the probability of getting a 1 at least once. Well, it would be the probability of getting a one each of the times multiplied by the number of times. 
 
@@ -275,7 +274,6 @@ ggplot(BCS0708, aes(ethgrp2, tcviolent, fill=ethgrp2)) +
 What you see here is that the boxplot also displays the values of fear for the few individuals in the dataset for which we don't know the ethnicity ("NA" in the X axis). In many occasions this is not what you want. At least you are trying to understand your missing data problem (an advanced topic which we don't cover this semester), you only want a plot that uses information for the individuals with  valid information (that is the ones for which we have data on fear and ethnicity). If you have quite a few NA cases and they seem systematically different from the other groups, you may have some reasons to be concerned.
 
 You can use the following code to modify the display (and also to ensure the boxes are ordered around the x axis not by alphabetical order but by order of the level of fear). The `na.omit()` function ask R to omit from the data all cases with missing information on the specified columns. The `reorder()` function ensure that the x axis is ordered according to the level of fear.
-
 
 
 ```r
@@ -372,10 +370,10 @@ summary(fearmodel.1)
 
 The result is significant suggesting that there are some significant differences across the ethnic groups in fear of violent crime. The probability of observing this data, with the noted differences in means, if the null hypothesis were true is also very low (<2e-16).
 
-Done, right? Well, not quite. Remember the steps in a hypothesis test. Before running the test we need to think and check the assumptions of the test, that should precede running the test. The ANOVA F test makes the following assumptions:
-+ **Independence assumption**: the groups must be be independent of each other (this assumption would be violated if for example we compare a subjects performance before some treatment, again during the treatment, and then after the treatment: for this you would need something called *repeated measures ANOVA* which we don't have the time to cover).
-+ **Randomisation condition**: were the groups created through randomisation or in case of surveys are the data from each group a representative sample of that group? As with the t test, we are assuming simple random selection, which is not the case when the survey uses a complex survey design (but as we said then we will ignore this for convenience).
-+ **Equal variance assumption** (also called the lovely names of homogeneity of variance or homoskedasticity): to check this assumption you need to check that the groups have similar variances (we'll discuss this in greater length next). But it is important you know statisticians have discussed the degree to which this assumption matters, or in other words to what degree ANOVA is *robust*  to violations of this assumptions. Is ANOVA robust (will give us results we can trust) when this assumption is violated? Andy Field and his co-authors (2012) discuss this at length in page 413. His view is that "when sample sizes are unequal, ANOVA is not robust to violations of homogeneity of variance" and we should proceed accordingly. 
+Done, right? Well, not quite. Remember the steps in a hypothesis test. Before running the test we need to think and check the assumptions of the test, that should precede running the test. The ANOVA F test makes the following assumptions:  
++ **Independence assumption**: the groups must be be independent of each other (this assumption would be violated if for example we compare a subjects performance before some treatment, again during the treatment, and then after the treatment: for this you would need something called *repeated measures ANOVA* which we don't have the time to cover).  
++ **Randomisation condition**: were the groups created through randomisation or in case of surveys are the data from each group a representative sample of that group? As with the t test, we are assuming simple random selection, which is not the case when the survey uses a complex survey design (but as we said then we will ignore this for convenience).  
++ **Equal variance assumption** (also called the lovely names of homogeneity of variance or homoskedasticity): to check this assumption you need to check that the groups have similar variances (we'll discuss this in greater length next). But it is important you know statisticians have discussed the degree to which this assumption matters, or in other words to what degree ANOVA is *robust*  to violations of this assumptions. Is ANOVA robust (will give us results we can trust) when this assumption is violated? Andy Field and his co-authors (2012) discuss this at length in page 413. His view is that "when sample sizes are unequal, ANOVA is not robust to violations of homogeneity of variance" and we should proceed accordingly.   
 + **Normal population assumption**: like the t test, we need to assume that the normal model is reasonable for the populations underlying each of the treatment groups.
 
 ### Checking homogeneity of variance and dealing with unequal spread
@@ -639,8 +637,8 @@ t1waybt(tcviolent ~ ethgrp2, data = BCS0708, tr = .05, nboot = 599)
 ## 
 ## Test statistic: 45.3591 
 ## p-value: 0 
-## Variance explained: 0.091 
-## Effect size: 0.301
+## Variance explained: 0.082 
+## Effect size: 0.286
 ```
 
 As with the standard ANOVA and the Welch version, we still get a significant result.
