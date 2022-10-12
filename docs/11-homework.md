@@ -67,7 +67,7 @@ I created a new variable `neigh_sd` composing variables from variables Q14A to Q
 
 Let’s look at another variable, of whether the respondent reported an incidence of theft to the police. This variable is called `Q61E_f` in your data. Use the `attributes()` function to learn about the variable. Remember this is a categorical variable so you need to transform the data into a 'factor' variable. 
 1) What percentage of respondents who answered this question with Yes or No reported their theft to the police?  
-2) Calculate 95% confidence intervals around this value (hint: look for the `prop.table()` function in the lab notes). What does this tell you? Interpret this in your own words below.  
+2) Calculate 95% confidence intervals around this value (hint: look for the `prop.test()` function in the lab notes). What does this tell you? Interpret this in your own words below.  
 
 ## Week 4: Hypothesis tests (comparing means)
 
