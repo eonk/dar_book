@@ -68,16 +68,16 @@ There is a variable `neigh_sd` composing variables from variables Q14A to Q14E, 
 
 Let’s look at another variable, of whether the respondent reported an incidence of theft to the police. This variable is called `Q61E_f` in your data. Use the `attributes()` function to learn about the variable. Remember this is a categorical variable so you need to transform the data into a 'factor' variable.    
 
-3) What percentage of respondents who answered this question with Yes or No reported their theft to the police?   
-4) Calculate 95% confidence intervals around this value (hint: look for the `prop.test()` function in the lab notes). What does this tell you? Interpret this in your own words below.
+3) What percentage of respondents who answered this question with Yes or No reported their theft to the police? Make sure you only keep Yes or No and remove any missing observations.  
+4) Calculate 95% confidence intervals of the percentage of respondents who answered Yes (hint: look for the `prop.test()` function in the lab notes). What does this tell you? Interpret this in your own words below.
 
 ## Week 4: Hypothesis tests (comparing means)
 
 For this task, we will use data from the Crime Survey for England and Wales. Specifically we’ll be working with data from the 2013/14 year. You can find the data on blackboard in the data for this week folder. Note the extension (.dta) so remember what you will need for importing your data.
 
-1) We want to explore the difference in fear of crime between people who have been victims of crime and those who have not. The variable which tells you how many people had been victims in the last year is “bcsvictim”. Recode this variable so the values are meaningful rather than 0 and 1.  (Hint: you can use `attributes()` and `as_factor()` or `mutate()` and `case_when()`, look through past weeks for help).     
+1) We want to explore the difference in fear of crime between people who have been victims of crime and those who have not. The variable which tells you how many people had been victims in the last year is 'bcsvictim'. Re-code this variable so the values are meaningful rather than 0 and 1.  (Hint: you can use `attributes()` and `as_factor()` or `mutate()` and `case_when()`, look through past weeks for help).     
 2) Create a frequency table and tell me how many people in the data set were victims of crime in the last year.     
 3) Now compare visually the distribution of the `worryx` variable between those who had and hadn’t been victims of crime in the last year. Choose the type of plot you think would be most appropriate. Who do you think has higher scores on fear of crime? Interpret this in your own words below.      
 4) What is the mean (average) score on `worryx` (fear of crime score) for those who had been victims of crime? What about those who had not?. Now what do you think who has higher scores of worry?   
 5) Use the appropriate statistical test to tell me whether or not there is a statistically significant difference (with alpha = 0.05) in worry between those who have been victim of crime and those who have not. Explain your answer.    
-6) What does this significant effect mean? How big is the difference in mean fear of crime scores between the groups? Explain in your own words as well this result. 
+6) What does this significant effect mean? How big is the difference in mean fear of crime scores between the groups? Explain in your own words as well this result.   
