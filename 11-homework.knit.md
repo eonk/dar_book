@@ -84,21 +84,6 @@ For this task, we will use data from the Crime Survey for England and Wales. Spe
 
 
 
-```{r setup, include=FALSE}
-library(learnr)
-```
 
 
-```{r addition, exercise=TRUE}
-1 + 1
-```
-
-```{r filter, exercise=TRUE}
-# Change the filter to select February rather than January
-nycflights <- filter(nycflights, month == 1)
-```
-
-```{r filter-solution}
-nycflights <- filter(nycflights, month == 2)
-```
 
